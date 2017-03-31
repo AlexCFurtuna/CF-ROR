@@ -1,0 +1,18 @@
+$primary-color: #333;
+$centered: center;
+
+body {
+  color: $primary-color;
+  ul, h1, h2, p, footer {
+    text-align: $centered;
+    list-style: none;
+    li {
+      display: inline-block;
+      font-size: 2em;
+      margin: 1em;
+    }
+  }
+}
+.cruisebike {
+  margin: 0 auto;
+}
