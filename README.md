@@ -1,5 +1,7 @@
-<<<<<<< HEAD
-#Waistcoat four loko ramps cronut, gastropub jean shorts twee next level. Cardigan ennui pok pok vexillologist, tbh readymade selfies fap dreamcatcher mlkshk whatever lomo. +1 hashtag neutra, plaid cliche distillery ethical 3 wolf moon craft beer drinking vinegar. Chicharrones yuccie occupy selvage portland cardigan fam DIY hashtag brunch cred, distillery plaid edison bulb. Roof party tofu wolf hella, synth health goth hoodie hexagon etsy unicorn franzen leggings lomo art party williamsburg. Flannel PBR&B master cleanse freegan unicorn forage. Offal raw denim everyday carry, irony four dollar toast marfa vexillologist hammock.
-=======
-# CF-ROR
->>>>>>> b55700ff96dce72915bdf992862128442cb5dd12
+This app does everything you could possibly want it to do and not only that, it is beautifully designed and extremely intuitive to use. Download it from the App Store for FREE if you don’t mind some adverts popping up or if you prefer an ad-free experience then you can down load the ad-free version for 99p.
+
+Who is this app aimed at?
+Everyone who could possibly need to do anything! It really is the full experience.
+
+That’s a big claim, does it really work?
+Yes it does and has been given 5 out of 5 stars on all the reviews we’ve seen so far, so download it now and let us know what you think.
