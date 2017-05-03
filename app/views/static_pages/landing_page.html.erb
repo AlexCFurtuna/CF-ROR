@@ -1,16 +1,13 @@
+<h1>Welcome to Berlin Bikes</h1>
+<h2>Your source for brand new or used bikes</h2>
+
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-  </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <% @products.each do |product| %>
     <div class="item<%= " active" if product == @products.first %>">
-      <%= image_tag("bike.jpg", :style => "margin: 0 auto;") %>
+      <%= image_tag("bike.jpg", :style => "margin: 0 auto;", size: "600x600") %>
       <div class="carousel-caption">
         <%= product.name %>
       </div>
@@ -28,3 +25,10 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>

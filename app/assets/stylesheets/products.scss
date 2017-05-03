@@ -1,17 +1,23 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-h1:hover {
-  color: black;
+
+.product-header {
+  color: rgb(236, 142, 114);
+  font-family: Verdana, serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
 }
-.product-name {
-  font-size: 2em;
+.product-description {
+  color: rgb(100, 100, 100);
+  margin: 33px 33px 0 0;
 }
-.prod-info {
-  font-size: 1.5em;
-  display: block;
-  margin: .4 auto;
+.product-details {
+  border: solid 1px rgb(176, 172, 171);
+  padding: 20px;
 }
-.misc-info {
-  font-size: 0.5em;
+
+.product-info {
+  margin-top: 60px;
 }

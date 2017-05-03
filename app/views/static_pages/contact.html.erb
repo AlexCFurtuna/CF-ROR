@@ -1,2 +1,33 @@
-<h1>Contact</h1>
-<p>If you want to get in touch with us please visit us at our local store on Berlin Street or drop us a line at berli@bikes.com</p>
+<div class="container">
+  <h1>Contact Info</h1>
+  <row>
+    <div class="col-lg-3 col-md-3 col-sm-12 contact-details">
+      <p>
+        <span class="glyphicon glyphicon-envelope"></span> info@berlin-bikes.co.uk<br><br>
+        <span class="glyphicon glyphicon-phone"></span> 0000 000 000<br><br>
+        <span class="glyphicon glyphicon-home"></span> 1 North Pole Road, London
+      </p>
+      </p>
+    </div>
+
+    <%= form_tag("/static_pages/thank_you") do %>
+      <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+        <div class="form-group">
+          <%= label_tag :name %>
+          <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name", required: "true"%>
+        </div>
+        <div class="form-group">
+          <%= label_tag :email, "Email Address" %>
+          <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email", required: "true", type: "email" %>
+        </div>
+        <div class="form-group">
+          <%= label_tag :message %>
+          <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message", required: "true" %>
+        </div>
+      </div>
+      <button class="btn btn-primary">
+      <%= submit_tag "Send" %>
+      </button>
+    <% end %>
+  </row>
+</div>

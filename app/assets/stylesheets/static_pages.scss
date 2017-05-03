@@ -2,6 +2,7 @@ $primary-color: #333;
 $centered: center;
 
 body {
+  margin: 0;
   color: $primary-color;
   ul, h1, h2, p, footer {
     text-align: $centered;
@@ -13,6 +14,25 @@ body {
     }
   }
 }
-.cruisebike {
-  margin: 0 auto;
+.carousel-caption {
+  color: black;
+  position: relative;
+  left: auto;
+  right: auto;
+  top: .5em;
+  font-size: 2em;
+  font-family: Verdana, serif;
+  font-style: bold;
+}
+.carousel-indicators {
+  position: relative;
+}
+.carousel-indicators li {
+  background-color: black;
+  border-color: black;
+  opacity: 0.5;
+}
+.carousel-control.right,
+.carousel-control.left {
+  background-image: none;
 }

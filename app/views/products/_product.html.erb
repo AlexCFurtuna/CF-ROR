@@ -1,17 +1,23 @@
 <% @products.each do |product| %>
-  <div class="col-sm-2 col-md-2 col-lg-3">
-    <%= image_tag("bike.jpg", class: "img-responsive") %>
+  <div class="col-sm-6 col-md-6 col-lg-4 product-info">
 
-    <h1 class="product-name">
-      <%= link_to product.name, product %>
-    </h1>
+    <div class="product-details">
+      <%= image_tag("bike.jpg", class: "img-responsive bike-img") %>
+      <h3 class="product-header"><%= link_to product.name, product %></h3>
+      <p class="product-descriptions">
+        <%= product.description %>
+        </p>
+        <p>
+          $<%= product.price %>
+          <%= product.colour %>
+        </p>
+        <p>
+          <%= link_to 'Edit', edit_product_path(product) %>
+          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </p>
 
-    <ul>
-      <li class="prod-info"><%= product.description %></li>
-      <li class="prod-info"><%= product.colour %></li>
-      <li class="prod-info">$<%= product.price %></li>
-      <li class="misc-info"><%= link_to 'Edit', edit_product_path(product) %></li>
-      <li class="misc-info"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></li>
-    </ul>
+
+    </div>
+
   </div><!-- /col -->
 <% end %>
