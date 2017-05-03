@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+ .product-header {
+   color: rgb(236, 142, 114);
+   font-family: Verdana, serif;
+   font-weight: 300;
+   font-size: 20px;
+   text-align: center;
+ }
+ .product-description {
+   color: rgb(100, 100, 100);
+   margin: 33px 33px 0 0;
+ }
+ .product-details {
+   border: solid 1px rgb(176, 172, 171);
+   padding: 20px;
+ }
+
+ .product-info {
+   margin-top: 60px;
+ }
