@@ -1,15 +1,42 @@
-<p id="notice"><%= notice %></p>
+<p id="notice">
+<%= notice %>
+</p>
 
-<h1>Products</h1>
+
+<h1>
+Products
+</h1>
+
+
 
 <table>
-  <div class="container-fluid">
+
+
+<div class="container-fluid">
+
+
   <div class="row">
-    <%= render @products %>
+
+
+    <% @products.each do |product| %>
+
+
+    <%= render partial: "product", locals: {product: product} %>
+
+
+    <% end %>
+
+
   </div>
+
+
 </div>
 
 
+
+
 <br>
+
+
 
 <%= link_to 'New Product', new_product_path %>
