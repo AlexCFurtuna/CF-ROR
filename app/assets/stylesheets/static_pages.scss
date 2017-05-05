@@ -5,8 +5,8 @@ body {
   margin: 0;
   color: $primary-color;
   ul, h1, h2, p, footer {
-    text-align: $centered;
     list-style: none;
+    text-align: $centered;
     li {
       display: inline-block;
       font-size: 2em;

@@ -1,0 +1,19 @@
+$primary-color: black;
+$centered: center;
+
+
+.btn {
+  margin-top: 2.5em;
+  background-color: $primary-color;
+  color: white;
+}
+input[type="submit" i] {
+  background-color: $primary-color;
+  border: none;
+}
+
+@media screen and (min-width: 400px) and (max-width: 650px) {
+  .container.header, .contact-details {
+    text-align: $centered;
+  }
+}

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container header">
   <h1>Contact Info</h1>
   <row>
     <div class="col-lg-3 col-md-3 col-sm-12 contact-details">
@@ -23,11 +23,14 @@
         <div class="form-group">
           <%= label_tag :message %>
           <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message", required: "true" %>
+
+          <button class="btn">
+          <%= submit_tag "Send" %>
+          </button>
+        <% end %>
+
         </div>
       </div>
-      <button class="btn btn-primary">
-      <%= submit_tag "Send" %>
-      </button>
-    <% end %>
+
   </row>
 </div>

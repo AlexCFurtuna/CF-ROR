@@ -8,6 +8,7 @@
     <% @products.each do |product| %>
     <div class="item<%= " active" if product == @products.first %>">
       <%= image_tag("bike.jpg", :style => "margin: 0 auto;", size: "600x600") %>
+
       <div class="carousel-caption">
         <%= product.name %>
       </div>
