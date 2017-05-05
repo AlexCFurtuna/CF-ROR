@@ -1,0 +1,172 @@
+/* line 5, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/contact.scss */
+.btn {
+  margin-top: 2.5em;
+  background-color: black;
+  color: white;
+}
+
+/* line 10, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/contact.scss */
+input[type="submit" i] {
+  background-color: black;
+  border: none;
+}
+
+@media screen and (min-width: 400px) and (max-width: 650px) {
+  /* line 16, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/contact.scss */
+  .container.header, .contact-details {
+    text-align: center;
+  }
+}
+/* line 1, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/landing_page.scss */
+.carousel-control:hover {
+  background-color: lightgrey;
+}
+
+/* line 4, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/landing_page.scss */
+.carousel.slide {
+  margin: 5em auto;
+}
+
+/* line 7, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/landing_page.scss */
+.carousel-inner img {
+  margin-top: 3em;
+  width: 50%;
+}
+
+/* line 11, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/landing_page.scss */
+.carousel-caption {
+  font-size: 3em;
+}
+
+/* line 14, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/landing_page.scss */
+.carousel-indicators {
+  display: none;
+}
+/* line 5, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/products.scss */
+.product-header {
+  color: #ec8e72;
+  font-family: Verdana, serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* line 12, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/products.scss */
+.product-description {
+  color: #646464;
+  margin: 33px 33px 0 0;
+}
+
+/* line 16, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/products.scss */
+.product-details {
+  border: solid 1px #b0acab;
+  padding: 20px;
+}
+
+/* line 21, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/products.scss */
+.product-info {
+  margin-top: 60px;
+}
+/* line 1, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/show.scss */
+.img-responsive {
+  margin: 0 auto;
+  border: 3px solid black;
+  margin-bottom: 4em;
+}
+/* line 4, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/static_pages.scss */
+body {
+  margin: 0;
+  color: #333;
+}
+/* line 7, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/static_pages.scss */
+body ul, body h1, body h2, body p, body footer {
+  list-style: none;
+  text-align: center;
+}
+/* line 10, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/static_pages.scss */
+body ul li, body h1 li, body h2 li, body p li, body footer li {
+  display: inline-block;
+  font-size: 2em;
+  margin: 1em;
+}
+
+/* line 17, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/static_pages.scss */
+.carousel-caption {
+  color: black;
+  position: relative;
+  left: auto;
+  right: auto;
+  top: .5em;
+  font-size: 2em;
+  font-family: Verdana, serif;
+  font-style: bold;
+}
+
+/* line 27, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/static_pages.scss */
+.carousel-indicators {
+  position: relative;
+}
+
+/* line 30, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/static_pages.scss */
+.carousel-indicators li {
+  background-color: black;
+  border-color: black;
+  opacity: 0.5;
+}
+
+/* line 35, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/static_pages.scss */
+.carousel-control.right,
+.carousel-control.left {
+  background-image: none;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+/* line 18, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+body nav {
+  margin: 50px auto;
+}
+/* line 21, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+body ul {
+  text-align: center;
+  padding: 0;
+}
+/* line 25, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+body li {
+  margin: auto 1em;
+}
+/* line 28, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+body a {
+  color: black;
+}
+/* line 31, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+body a:hover {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: 0.1s ease-in;
+}
+/* line 37, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+body footer {
+  text-align: center;
+}
+
+@media screen and (max-width: 650px) {
+  /* line 43, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  body ul li {
+    display: block;
+    margin: 1em auto;
+  }
+}
