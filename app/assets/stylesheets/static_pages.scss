@@ -36,3 +36,7 @@ body {
 .carousel-control.left {
   background-image: none;
 }
+.carousel-control.right,
+.carousel-control.left:hover {
+  background-color: transparent;
+}

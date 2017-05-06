@@ -10,6 +10,7 @@ $centered: center;
 input[type="submit" i] {
   background-color: $primary-color;
   border: none;
+  color: white;
 }
 
 @media screen and (min-width: 400px) and (max-width: 650px) {

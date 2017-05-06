@@ -3,18 +3,12 @@
 
 <h1>Products</h1>
 
+<%= link_to 'New Product', new_product_path, style:"float: right" %>
+
 
 <table>
 <div class="container-fluid">
   <div class="row">
-    <% @products.each do |product| %>
-    <%= render partial: "product", locals: {product: product} %>
-    <% end %>
+    <%= render @products %>
   </div>
 </div>
-
-
-<br>
-
-
-<%= link_to 'New Product', new_product_path %>
