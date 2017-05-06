@@ -3,12 +3,12 @@
 
 <h1>Products</h1>
 
-<%= link_to 'New Product', new_product_path, style:"float: right" %>
+<%= link_to 'New Product', new_product_path, class:"pull-right" %>
 
 
 <table>
 <div class="container-fluid">
-  <div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12">
     <%= render @products %>
   </div>
 </div>
