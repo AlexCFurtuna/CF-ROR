@@ -4,7 +4,7 @@ class StaticPagesController < ApplicationController
 
   def landing_page
     @products = Product.limit(3)
-    redirect_to "static_pages/about"
+    redirect_to static_pages_about_path
   end
 
 end
