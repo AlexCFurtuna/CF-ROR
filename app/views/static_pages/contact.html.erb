@@ -1,25 +1,18 @@
 <div class="container header">
-  <h1>Contact Info</h1>
-  <row>
-    <div class="col-lg-3 col-md-3 col-sm-12 contact-details">
-      <p>
-        <span class="glyphicon glyphicon-envelope"></span> info@berlin-bikes.co.uk<br><br>
-        <span class="glyphicon glyphicon-phone"></span> 0000 000 000<br><br>
-        <span class="glyphicon glyphicon-home"></span> 1 North Pole Road, London
-      </p>
-      </p>
-    </div>
+  <h1>Contact Us</h1>
+  <%= flash[:notice] %>
 
     <%= form_tag("/static_pages/thank_you") do %>
+    <div class="row">
       <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
         <div class="form-group">
           <%= label_tag :name %>
           <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name", required: "true"%>
-        </div>
+        </div><!--name-->
         <div class="form-group">
           <%= label_tag :email, "Email Address" %>
           <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email", required: "true", type: "email" %>
-        </div>
+        </div><!--email-->
         <div class="form-group">
           <%= label_tag :message %>
           <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message", required: "true" %>
@@ -28,7 +21,7 @@
           <%= submit_tag "Send" %>
           </button>
         <% end %>
-        </div>
-      </div>
-  </row>
+      </div><!--message-->
+    </div><!--div->
+    </div><!--row-->
 </div>
