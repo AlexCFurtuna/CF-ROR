@@ -16,28 +16,30 @@
 
   <body>
     <nav>
-  <ul>
-    <li><%= link_to 'Home', root_path %></li>
-    <li><%= link_to 'Products', products_path %></li>
-    <li><%= link_to 'About', static_pages_about_path %></li>
-    <li><%= link_to 'Contact', static_pages_contact_path %></li>
-    <%= form_tag("/products", method: "get") do %>
-      <%= label_tag(:q, "Search for:") %>
-      <%= text_field_tag(:q) %>
-      <%= submit_tag("Search") %>
-    <% end %>
-  </ul>
+      <ul>
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'Products', products_path %></li>
+        <li><%= link_to 'About', static_pages_about_path %></li>
+        <li><%= link_to 'Contact', static_pages_contact_path %></li>
+        
+        <%= form_tag("/products", method: "get") do %>
+          <%= label_tag(:q, "Search for:") %>
+          <%= text_field_tag(:q) %>
+          <%= submit_tag("Search") %>
+        <% end %>
+      </ul>
     </nav>
-
-    <div>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    </div>
-
+    
+    <% if notice %>
+      <p class="alert alert-info"><%= notice %></p>
+    <% else %>
+      <p class="alert alert-info"><%= alert %></p>
+    <% end %>
+    
     <%= yield %>
-
+    
     <footer>
-      &copy 2017 Bike Berlin
+      <p>&copy 2017 Bike Berlin</p>
     </footer>
   </body>
 </html>
