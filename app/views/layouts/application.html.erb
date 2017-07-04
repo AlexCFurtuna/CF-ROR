@@ -28,8 +28,8 @@
           <%= submit_tag("Search") %>
         <% end %>
       </ul
-      <ul class="nav pull-right">
-  <li>
+      <ul>
+  <li class="pull-right" style="list-style: none; font-weight: bold; font-size: 1.3em;">
   <% if user_signed_in? %>
     <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
   <% else %>
