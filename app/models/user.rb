@@ -10,3 +10,8 @@ class User < ApplicationRecord
     UserMailer.send_new_user_message(self).deliver
   end
 end
+
+class UsersController < ApplicationController
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
+end
