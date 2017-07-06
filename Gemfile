@@ -55,3 +55,5 @@ group :production do
 end
 
 gem 'devise'
+gem 'sendgrid-ruby'
+gem 'cancancan', '~> 1.10'
