@@ -56,4 +56,4 @@ end
 
 gem 'devise'
 gem 'sendgrid-ruby'
-gem 'cancancan', '~> 1.10'
+gem 'cancancan', '~> 2.0'
