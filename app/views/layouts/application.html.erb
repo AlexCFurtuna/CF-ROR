@@ -12,8 +12,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <%= csrf_meta_tags %>
-    <p id="notice" class="alert alert-info" role="alert"><%= alert %></p>
-    <p id="notice" class="alert alert-info" role="alert"><%= notice %></p>
+    <% if notice %>
+    <p class="alert alert-info"><%= notice %></p>
+    <p class="alert alert-info"><%= alert %></p>
+    <% end %>
   </head>
 
   <body>
