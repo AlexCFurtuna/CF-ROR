@@ -3,4 +3,5 @@ class Comment < ActiveRecord::Base
   belongs_to :product
 
   scope :rating_desc, -> { order(rating: :desc) }
+  scope :rating_asc, -> { reorder(rating: :asc) }
 end
