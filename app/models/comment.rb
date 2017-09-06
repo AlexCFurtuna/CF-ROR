@@ -1,6 +1,6 @@
 class Comment < ActiveRecord::Base
   belongs_to :user
   belongs_to :product
-end
 
-scope :rating_desc, -> {order(rating :desc) }
+  scope :rating_desc, -> { order(rating: :desc) }
+end
