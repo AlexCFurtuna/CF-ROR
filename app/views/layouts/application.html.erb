@@ -12,13 +12,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <%= csrf_meta_tags %>
-    <% if notice %>
-      <p class="alert alert-info"><%= notice %></p>
-      <p class="alert alert-info"><%= alert %></p>
-    <% end %>
+
   </head>
 
   <body>
+
+    <div class="login">
+      <ul class="login section">
+        <li class="pull-right" style="list-style: none; font-weight: bold; font-size: 1.3em;">
+        <% if user_signed_in? %>
+          <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+          <% else %>
+          <%= link_to('Login', new_user_session_path) %>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+
+    <br />
+
+    <div class="notice">
+      <% if notice %>
+        <p class="alert alert-info"><%= notice %></p>
+      <% else %>
+        <p class="alert alert-info"><%= alert %></p>
+      <% end %>
+    </div>
+
+    <br />
+    <br />
+
+    <%= yield %>
+
     <nav class="navbar-collapse">
       <ul>
         <li><%= link_to 'Home', root_path %></li>
@@ -32,25 +57,26 @@
           <%= submit_tag("Search") %>
         <% end %>
       </ul
-      <ul>
-  <li class="pull-right" style="list-style: none; font-weight: bold; font-size: 1.3em;">
-  <% if user_signed_in? %>
-    <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-  <% else %>
-    <%= link_to('Login', new_user_session_path) %>
-  <% end %>
-  </li>
-</ul>
+
+      <div class="landing">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-offset-1 col-lg-10">
+
+            </div>
+          </div>
+        </div>
+      </div>
+
 
     </nav>
 
-    <% if notice %>
-      <p class="alert alert-info"><%= notice %></p>
-    <% else %>
-      <p class="alert alert-info"><%= alert %></p>
-    <% end %>
 
-    <%= yield %>
+
+
+
+
+
 
     <footer>
       <p>&copy 2017 Bike Berlin</p>

@@ -1,7 +1,6 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 .product-header {
   color: rgb(236, 142, 114);
   font-family: Verdana, serif;
@@ -20,4 +19,9 @@
 
 .product-info {
   margin-top: 60px;
+}
+.btn.btn-default {
+  display: block;
+  width: 15%;
+  padding: 10px 15px;
 }
