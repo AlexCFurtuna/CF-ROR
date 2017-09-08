@@ -42,8 +42,6 @@
     <br />
     <br />
 
-    <%= yield %>
-
     <nav class="navbar-collapse">
       <ul>
         <li><%= link_to 'Home', root_path %></li>
@@ -56,20 +54,20 @@
           <%= text_field_tag(:q) %>
           <%= submit_tag("Search") %>
         <% end %>
-      </ul
+      </ul>
 
-      <div class="landing">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-offset-1 col-lg-10">
+      <%= yield %>
 
-            </div>
+    </nav>
+    <div class="landing">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="">
+            <!--<%= image_tag "landing2.jpg", style: "height: 400px; width: 800px;"%>-->
           </div>
         </div>
       </div>
-
-
-    </nav>
+    </div>
 
 
 
