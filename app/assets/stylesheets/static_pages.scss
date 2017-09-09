@@ -4,6 +4,13 @@ $centered: center;
 body {
   margin: 0;
   color: $primary-color;
+  .landing-img {
+    border-right: 1px solid black; border-left: 1px solid black;
+    padding: 20px;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+  }
   ul, h1, h2, p, footer {
     list-style: none;
     text-align: $centered;
@@ -13,30 +20,4 @@ body {
       margin: 1em;
     }
   }
-}
-.carousel-caption {
-  color: black;
-  position: relative;
-  left: auto;
-  right: auto;
-  top: .5em;
-  font-size: 2em;
-  font-family: Verdana, serif;
-  font-style: bold;
-}
-.carousel-indicators {
-  position: relative;
-}
-.carousel-indicators li {
-  background-color: black;
-  border-color: black;
-  opacity: 0.5;
-}
-.carousel-control.right,
-.carousel-control.left {
-  background-image: none;
-}
-.carousel-control.right,
-.carousel-control.left:hover {
-  background-color: transparent;
 }
