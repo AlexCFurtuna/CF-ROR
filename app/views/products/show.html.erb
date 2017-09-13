@@ -2,12 +2,12 @@
   <div class="show">
     <p id="notice"><%= notice %></p>
     <div class="row">
-      <div class="col-lg-12">
+      <div class="col-lg-6">
         <% if @product.image_url.present? %>
         <%= image_tag(@product.image_url, class: "img-responsive") %>
         <% end %>
 
-        <div class="col-lg-offset-4 col-lg-4">
+        <div class="product-info">
 
           <p><strong>Name:</strong>
           <%= @product.name %></p>
@@ -20,16 +20,18 @@
 
           <p><strong>Price:</strong>
           $<%= @product.price %></p>
-
-          <p><strong>Rating</strong></p>
-          <p><%= @product.highest_rating_comment %></p>
-          <p><%= @product.lowest_rating_comment %></p>
+          <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-default" %>
+          <%= link_to 'Back', products_path, class: "btn btn-default" %>
 
         </div><!--col-lg-4-->
-      </div><!--col-->
+      </div><!--col-lg-6-->
+      <div class="col-lg-6">
+        <p><strong>Reviews</strong></p>
+        <p><%= @product.highest_rating_comment %></p>
+        <p><%= @product.lowest_rating_comment %></p>
+        <%= render 'new_comment' %>
+        <%= render 'comments' %>
+      </div>
     </div><!--row-->
   </div><!--show-->
 </section>
-
-<%= link_to 'Edit', edit_product_path(@product), class: "btn btn-default" %>
-<%= link_to 'Back', products_path, class: "btn btn-default" %>
