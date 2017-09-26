@@ -23,7 +23,11 @@
           <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-default" %>
           <%= link_to 'Back', products_path, class: "btn btn-default" %>
 
-        </div><!--col-lg-4-->
+          <br />
+
+          <p class="rated" data-score="<%= @product.average_rating %>">Average rating : </p>
+
+        </div><!--product-info-->
       </div><!--col-lg-6-->
       <div class="col-lg-6">
         <p><strong>Reviews</strong></p>

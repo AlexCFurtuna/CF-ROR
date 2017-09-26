@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post '/rate' => 'rater#create', :as => 'rate'
   devise_for :users, controllers: { registrations: "registrations" }, path: '', path_names: {sign_in: 'login', sign_out: 'logout' }
   resources :users
   resources :products
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
   resources :orders, only: [:index, :show, :create, :destroy]
 
   resources :products do
-  resources :comments
+    resources :comments
 end
 
 resources :users
