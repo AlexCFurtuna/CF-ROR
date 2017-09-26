@@ -57,3 +57,4 @@ end
 gem 'devise'
 gem 'sendgrid-ruby'
 gem 'cancancan', '~> 2.0'
+gem 'rails_12factor'
