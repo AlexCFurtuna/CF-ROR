@@ -35,6 +35,9 @@
         <p><%= @product.lowest_rating_comment %></p>
         <%= render 'new_comment' %>
         <%= render 'comments' %>
+        <% @comments.each do |comment| %>
+          <% end %>
+        <%= will_paginate @comments %>
       </div>
     </div><!--row-->
   </div><!--show-->
