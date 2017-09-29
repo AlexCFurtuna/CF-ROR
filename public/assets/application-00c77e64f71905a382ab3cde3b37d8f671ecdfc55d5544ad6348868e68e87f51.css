@@ -1,0 +1,186 @@
+/* line 4, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/comments.scss */
+textarea#comment_body.form-control {
+  margin: 0 auto;
+  width: 60%;
+  height: 7em;
+}
+/* line 5, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/contact.scss */
+.btn {
+  margin-top: 2.5em;
+  background-color: black;
+  color: white;
+}
+
+/* line 10, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/contact.scss */
+input[type="submit" i] {
+  background-color: black;
+  border: none;
+  color: white;
+}
+
+@media screen and (min-width: 400px) and (max-width: 650px) {
+  /* line 17, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/contact.scss */
+  .container.header, .contact-details {
+    text-align: center;
+  }
+}
+/* line 1, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/landing_page.scss */
+.carousel-control:hover {
+  background-color: lightgrey;
+}
+
+/* line 4, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/landing_page.scss */
+.carousel.slide {
+  margin: 5em auto;
+}
+
+/* line 7, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/landing_page.scss */
+.carousel-inner img {
+  margin-top: 3em;
+  width: 50%;
+}
+
+/* line 11, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/landing_page.scss */
+.carousel-caption {
+  font-size: 3em;
+}
+
+/* line 14, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/landing_page.scss */
+.carousel-indicators {
+  display: none;
+}
+/* line 4, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/products.scss */
+.product-header {
+  color: #ec8e72;
+  font-family: Verdana, serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* line 11, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/products.scss */
+.product-description {
+  color: #646464;
+  margin: 33px 33px 0 0;
+}
+
+/* line 15, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/products.scss */
+.product-details {
+  border: solid 1px #b0acab;
+  padding: 20px;
+}
+
+/* line 20, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/products.scss */
+.product-info {
+  margin-top: 60px;
+}
+
+/* line 23, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/products.scss */
+.btn.btn-default {
+  display: block;
+  width: 15%;
+  padding: 10px 15px;
+}
+/* line 1, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/show.scss */
+.img-responsive {
+  margin: 0 auto;
+  border: 3px solid black;
+  margin-bottom: 4em;
+}
+
+/* line 6, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/show.scss */
+p {
+  font-size: 1.4em;
+}
+
+/* line 9, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/show.scss */
+.btn.btn-default {
+  float: none;
+  margin: 0 auto;
+}
+/* line 4, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/static_pages.scss */
+body {
+  margin: 0;
+  color: #333;
+}
+/* line 7, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/static_pages.scss */
+body .landing-img {
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  padding: 20px;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+/* line 14, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/static_pages.scss */
+body ul, body h1, body h2, body p, body footer {
+  list-style: none;
+  text-align: center;
+}
+/* line 17, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/static_pages.scss */
+body ul li, body h1 li, body h2 li, body p li, body footer li {
+  display: inline-block;
+  font-size: 2em;
+  margin: 1em;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+/* line 17, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+body {
+  background-color: #f7f9fa;
+}
+/* line 19, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+body nav {
+  margin: 50px auto;
+}
+/* line 22, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+body ul {
+  text-align: center;
+  padding: 0;
+}
+/* line 26, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+body li {
+  margin: auto 1em;
+}
+/* line 29, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+body a {
+  color: black;
+}
+/* line 32, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+body a:hover {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: 0.1s ease-in;
+}
+/* line 38, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+body footer {
+  text-align: center;
+}
+
+/* line 42, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+.carousel.slide {
+  height: 500px;
+  width: 900px;
+}
+
+@media screen and (max-width: 650px) {
+  /* line 48, /Users/benbagley/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  body ul li {
+    display: block;
+    margin: 1em auto;
+  }
+}
