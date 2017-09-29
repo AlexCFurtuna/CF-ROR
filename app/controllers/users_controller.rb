@@ -82,7 +82,7 @@ end
 end
 
 class Ability
-  include CanCan:Ability
+  include CanCan::Ability
 
     def initialise(user)
       user ||= User.new
