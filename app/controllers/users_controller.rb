@@ -80,3 +80,16 @@ end
     params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :role)
   end
 end
+
+class Ability
+  include CanCan:Ability
+
+    def initialise(user)
+      user ||= User.new
+      if user.admin?
+        can :manage, :all
+      else
+        can :read, :all
+      end
+    end
+  end
