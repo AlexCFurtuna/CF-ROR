@@ -1,18 +1,11 @@
 <% if signed_in? %>
-  <br />
   <%= form_for([@product, @product.comments.build]) do |f| %>
-    <p>
-      <%= f.label :body, "Comments" %>
-    </p>
-      <br />
-    <p>
-      <%= f.text_area :body, class: "form-control", placeholder: "Please tell us what you think about your bike ..." %>
-    </p>
+    <%= f.label :body, "Comments" %>
     <br />
-    <p class="rating text-center"></p>
+    <%= f.text_area :body, class: "form-control", placeholder: "Please tell us what you think about your bike ..." %>
     <br />
-    <p>
-      <%= f.submit "Submit", class: "btn btn-default" %></p>
+    <div class="rating text-center"></div>
     <br />
-    <% end %>
+    <%= f.submit "Submit", class: "btn btn-default" %></p>
   <% end %>
+<% end %>
