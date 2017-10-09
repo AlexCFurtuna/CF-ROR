@@ -8,11 +8,11 @@ class Product < ApplicationRecord
   end
 
   def highest_rating_comment
-    comments.rating_desc.first
+    comments.rating_desc.first.rating
   end
 
   def lowest_rating_comment
-    comments.rating_asc.second
+    comments.rating_asc.first.rating if comments.count > 1
   end
 
   def average_rating

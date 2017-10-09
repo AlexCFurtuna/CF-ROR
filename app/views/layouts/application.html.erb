@@ -17,18 +17,30 @@
 
   <body>
 
-    <div class="login">
-      <ul class="login section">
-        <li class="pull-right" style="list-style: none; font-weight: bold; font-size: 1.3em;">
+    <nav class="navbar-collapse">
+      <ul>
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'Products', products_path %></li>
+        <li><%= link_to 'About', static_pages_about_path %></li>
+        <li><%= link_to 'Contact', static_pages_contact_path %></li>
+        <li class="float-r">
         <% if user_signed_in? %>
           <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
           <% else %>
           <%= link_to('Login', new_user_session_path) %>
           <% end %>
         </li>
+        <li class="search">
+          <%= form_tag("/products", method: "get") do %></li>
+          <li class="float-r"><a><%= submit_tag("Search", class: 'btn btn-default') %><a/></li>
+          <li class="float-r"><a><%= text_field_tag(:q,) %><a/></li>
+          <li class="float-r"><a><%= label_tag(:q, "Search for:") %><a/></li>
+        <% end %>
       </ul>
-    </div>
+    </nav>
 
+    <br />
+    <br />
     <br />
 
     <div class="notice">
@@ -40,24 +52,6 @@
     </div>
 
     <br />
-    <br />
-
-    <h1>Berlin Bikes</h1>
-
-    <nav class="navbar-collapse">
-      <ul>
-        <li><%= link_to 'Home', root_path %></li>
-        <li><%= link_to 'Products', products_path %></li>
-        <li><%= link_to 'About', static_pages_about_path %></li>
-        <li><%= link_to 'Contact', static_pages_contact_path %></li>
-
-        <%= form_tag("/products", method: "get") do %>
-          <%= label_tag(:q, "Search for:") %>
-          <%= text_field_tag(:q) %>
-          <%= submit_tag("Search") %>
-        <% end %>
-      </ul>
-    </nav>
 
     <%= yield %>
 

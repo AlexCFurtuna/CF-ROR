@@ -1,3 +1,11 @@
+$centered: center;
+.landing-img {
+  border-right: 1px solid black; border-left: 1px solid black;
+  padding: 20px;
+  width: 80%;
+  text-align: $centered;
+  margin: 10em auto 0 auto;
+}
 .carousel-control:hover {
   background-color: lightgrey;
 }

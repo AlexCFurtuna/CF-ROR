@@ -1,12 +1,21 @@
 <div class="col-sm-6 col-md-6 col-lg-4 product-info">
   <div class="product-details">
     <% if product.image_url.present? %>
-    <%= link_to image_tag(product.image_url, class: "img-responsive bike-img"), product %>
+    <%= link_to image_tag(product.image_url, class: "img-responsive"), product %>
     <% end %>
+    <div class="product-info">
 
-    <h3 class="product-header"><%= link_to product.name, product %></h3>
-    <p class="product-descriptions"><%= product.description %></p>
-    <p class="product-price">$<%= product.price %></p>
-    <p class="product-colour"><%= product.colour %></p>
+      <p><strong>Name:</strong>
+      <%= product.name %></p>
+
+      <p><strong>Description:</strong>
+      <%= product.description %></p>
+
+      <p><strong>Colour:</strong>
+      <%= product.colour %></p>
+
+      <p><strong>Price:</strong>
+      $<%= product.price %></p>
+    </div>
   </div><!--product-details-->
 </div><!-- /col -->
