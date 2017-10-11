@@ -32,7 +32,7 @@
         </li>
         <li class="search">
           <%= form_tag("/products", method: "get") do %></li>
-          <li class="float-r"><a><%= submit_tag("Search", class: 'btn btn-default') %><a/></li>
+          <li class="float-r"><a><%= submit_tag("Search", class: 'btn btn-danger') %><a/></li>
           <li class="float-r"><a><%= text_field_tag(:q,) %><a/></li>
           <li class="float-r"><a><%= label_tag(:q, "Search for:") %><a/></li>
         <% end %>
