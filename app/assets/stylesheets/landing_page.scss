@@ -6,6 +6,9 @@ $centered: center;
   text-align: $centered;
   margin: 10em auto 0 auto;
 }
+.lpage.img-responsive {
+  width: 60%;
+}
 .carousel-control:hover {
   background-color: lightgrey;
 }
