@@ -1,8 +1,7 @@
-
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :edit]
-
+  respond_to  :json, :html
 
   # GET /products
   # GET /products.json
@@ -10,7 +9,6 @@ class ProductsController < ApplicationController
     if params[:q]
       search_term = params[:q]
       @products = Product.search(search_term)
-      # return our filtered list here
     else
       @products = Product.all
     end
@@ -19,8 +17,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    @comments = @product.comments.order("created_at ASC")
-    @comments = Comment.paginate(:page => params[:page], :per_page => 3)
+    @comments = @product.comments.order("created_at ASC").paginate(:page => params[:page], :per_page => 3)
   end
 
   # GET /products/new
@@ -30,7 +27,6 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
-
   end
 
   # POST /products
