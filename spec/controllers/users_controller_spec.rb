@@ -2,11 +2,10 @@ require 'rails_helper'
 
 describe UsersController, type: :controller do
   before do
-    @user = User.create!(email: 'test-email@mail.com', password: 'test-password')
-    @user1 = User.create!(email: 'test-email2@mail.com', password: 'test-password')
+    @user = FactoryGirl.create(:user)
   end
 
-  describe "GET #show" do    
+  describe "GET #show" do
     context "User is logged in" do
       before do
         it "loads the correct user details" do
@@ -25,7 +24,7 @@ describe UsersController, type: :controller do
 
     context "cannot access second user show page" do
       it "redirects unauthorized user to login page" do
-        get :show, params: { id: @user1.id }
+        get :show, params: { id: @user.id }
         expect(response).to redirect_to(new_user_session_path)
       end
     end
