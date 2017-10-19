@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:show, :index,]
+  before_action :authenticate_user!
   load_and_authorize_resource
 
   # GET /users
@@ -12,7 +12,6 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-
   end
 
   # GET /users/new
@@ -23,11 +22,6 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
   end
-
-rescue_from CanCan::AccessDenied do |exception|
-  redirect_to main_app.root_url, :alert => exception.message
-end
-
 
   # POST /users
   # POST /users.json
@@ -77,19 +71,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :role)
+    params.require(:user).permit(:first_name, :last_name)
   end
 end
-
-class Ability
-  include CanCan::Ability
-
-    def initialise(user)
-      user ||= User.new
-      if user.admin?
-        can :manage, :all
-      else
-        can :read, :all
-      end
-    end
-  end
