@@ -7,7 +7,7 @@
       </div>
       <div class="col-lg-5">
         <% if @product.image_url.present? %>
-          <%= image_tag(@product.image_url, class: "img-responsive") %>
+          <%= image_tag(@product.image_url, class: "img-responsive", style: "width: 60%;") %>
         <% end %>
 
         <div class="product-info">
@@ -22,7 +22,7 @@
           <%= @product.colour %></p>
 
           <p><strong>Price:</strong>
-          $<%= @product.price %></p>
+          £<%= @product.price %></p>
 
           <div class="text-center">
             <% if signed_in? && current_user.admin? %>

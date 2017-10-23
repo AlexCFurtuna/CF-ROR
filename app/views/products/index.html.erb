@@ -1,22 +1,25 @@
-<div class="products">
+<div class="container">
   <p id="notice"><%= notice %></p>
+
   <div class="header">
-    <h2>Products</h2>
+    <h2>Portraits</h2>
     <p class="pull-right">
       <% if signed_in? && current_user.admin? %>
       <%= link_to 'New Product', new_product_path , class: "btn btn-default" %>
       <% end %>
     </p><!-- new product btn -->
   </div>
-  <div class="container-fluid products">
+
+  <div class="products">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-lg-2">
 
       </div>
-      <div class="col-md-8">
+      <div class="col-lg-8">
         <% @products.each do |product| %>
         <%= render product %>
         <% end %>
+      </div>
       </div>
     </div>
   </div>
