@@ -36,6 +36,13 @@
     color: #d9534f;
     transition: 0.3s ease-in;
   }
+  .navbar-brand {
+    background-image: url('/assets/logo.png');
+    background-repeat: no-repeat;
+    width: 10%;
+    background-size: contain;
+  }
+
   footer {
     text-align: center;
     margin: 10em 0;

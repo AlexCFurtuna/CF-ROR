@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Berlin Bikes</title>
+    <title>Murky Art</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -16,9 +16,9 @@
   </head>
 
   <body>
-
-    <nav class="navbar-collapse">
+    <nav class="navbar-fixed-top navbar-collapse">
       <ul>
+        <li class="navbar-brand"><a></a></li>
         <li><%= link_to 'Home', root_path %></li>
         <li><%= link_to 'Products', products_path %></li>
         <li><%= link_to 'About', static_pages_about_path %></li>
@@ -57,7 +57,7 @@
     <%= yield %>
 
     <footer>
-      <p>&copy; 2017 Bike Berlin</p>
+      <p>&copy; 2017 Murky Art</p>
     </footer>
   </body>
 </html>
