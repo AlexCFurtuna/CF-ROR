@@ -1,6 +1,5 @@
-<div class="container">
+<div class="products">
   <p id="notice"><%= notice %></p>
-
   <div class="header">
     <h2>Products</h2>
     <p class="pull-right">
@@ -10,8 +9,15 @@
     </p><!-- new product btn -->
   </div>
   <div class="container-fluid products">
-    <% @products.each do |product| %>
-     <%= render product %>
-    <% end %>
+    <div class="row">
+      <div class="col-md-4">
+
+      </div>
+      <div class="col-md-8">
+        <% @products.each do |product| %>
+        <%= render product %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
