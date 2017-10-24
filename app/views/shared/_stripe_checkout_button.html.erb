@@ -6,9 +6,7 @@
   data-description="<%= @product.description %>"
   data-image="<%= image_path(@product.image_url) %>"
   data-locale="auto"
-  data-currency="gbp"
-  data-email="<%= @user.email %>"
-  >
+  data-currency="gbp">
 </script>
 
 <%= hidden_field_tag(:product_id, @product.id) %>
