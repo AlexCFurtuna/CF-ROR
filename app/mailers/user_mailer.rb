@@ -9,7 +9,7 @@ class UserMailer < ApplicationMailer
   end
 
   def welcome(user)
-    @appname = "Berlin Bikes"
+    @appname = "Murky Art"
     mail(:to => user.email, :subject => "Welcome to #{@appname} !")
   end
 
