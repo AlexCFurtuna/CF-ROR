@@ -1,28 +1,12 @@
 $centered: center;
+
+h1, h2, footer {
+  $centered: center;
+}
 .landing-img {
   border-right: 1px solid black; border-left: 1px solid black;
   padding: 20px;
   width: 80%;
   text-align: $centered;
   margin: 10em auto 0 auto;
-}
-.lpage.img-responsive {
-  width: 60%;
-  margin: 0 auto;
-}
-.carousel-control:hover {
-  background-color: lightgrey;
-}
-.carousel.slide {
-  margin: 5em auto;
-}
-.carousel-inner img {
-  margin-top: 3em;
-  width: 50%;
-}
-.carousel-caption {
-  font-size: 3em;
-}
-.carousel-indicators {
-  display: none;
 }

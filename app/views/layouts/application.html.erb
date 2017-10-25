@@ -16,27 +16,44 @@
   </head>
 
   <body>
-    <nav class="navbar-fixed-top navbar-collapse">
-      <ul>
-        <li class="navbar-brand"><a></a></li>
-        <li><%= link_to 'Home', root_path %></li>
-        <li><%= link_to 'Products', products_path %></li>
-        <li><%= link_to 'About', static_pages_about_path %></li>
-        <li><%= link_to 'Contact', static_pages_contact_path %></li>
-        <li class="float-r">
-        <% if user_signed_in? %>
-          <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-          <% else %>
-          <%= link_to('Login', new_user_session_path) %>
-          <% end %>
-        </li>
-        <li class="search">
-          <%= form_tag("/products", method: "get") do %></li>
-          <li class="float-r"><a><%= submit_tag("Search", class: 'btn btn-danger') %><a/></li>
-          <li class="float-r"><a><%= text_field_tag(:q,) %><a/></li>
-          <li class="float-r"><a><%= label_tag(:q, "Search for:") %><a/></li>
-        <% end %>
-      </ul>
+    <nav class="navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+        </div>
+        <div class="navbar-brand brand-name navbar-left">
+          <a class="pull-left"><img src="/assets/logo.jpg" width="70" height="70"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li style="margin-left: 20px; font-size: 1.3em;"><%= link_to 'Home', root_path %></li>
+            <li style="margin-left: 20px; font-size: 1.3em;"><%= link_to 'Products', products_path %></li>
+            <li style="margin-left: 20px; font-size: 1.3em;"><%= link_to 'About', static_pages_about_path %></li>
+            <li style="margin-left: 20px; font-size: 1.3em;"><%= link_to 'Contact', static_pages_contact_path %></li>
+            </ul>
+            <ul class="nav navbar-nav search float-r">
+              <li <%= form_tag("/products", method: "get") do %></li>
+              <li style="font-size: 1.3em;" class="search-padding"><%= label_tag(:q, "Search for:") %></li>
+              <li style="font-size: 1.3em;" class="search-padding"><%= text_field_tag(:q,) %></li>
+              <li style="font-size: 1.3em;" class="search-padding btn"><%= submit_tag("Search", class: 'btn btn-danger') %></li>
+              <li style="font-size: 1.3em;">
+              <% if user_signed_in? %>
+                <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+                <% else %>
+                <%= link_to('Login', new_user_session_path) %>
+                <% end %>
+              </li>
+            </ul>
+
+            <% end %>
+
+        </div>
+      </div>
     </nav>
 
     <br />

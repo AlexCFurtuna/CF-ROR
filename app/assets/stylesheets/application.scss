@@ -16,51 +16,43 @@
  .float-r {
    float: right;
  }
+ .float-f {
+   float: left;
+ }
+ .center {
+   text-align: center;
+ }
+ .search-padding {
+   padding: 25px;
+ }
  body {
-   background-color: #f7f9fa;
    nav {
      background-color: black;
    }
    li {
-     display: inline-block;
-     font-size: 1.5em;
-     margin: 1em;
-     float: left;
+     margin-top: 3px;
+     color: white;
+     padding: 15px;
    }
-  a {
-    font-size: .8em;
-    color: white;
-  }
-  a:hover {
-    text-decoration: none;
-    color: #d9534f;
-    transition: 0.3s ease-in;
-  }
-  .navbar-brand {
-    background-image: url('/assets/logo.png');
-    background-repeat: no-repeat;
-    width: 10%;
-    background-size: contain;
-  }
-
-  footer {
-    text-align: center;
-    margin: 10em 0;
-  }
-  .btn.btn-default {
-    margin: 0 auto;
-    background-color: #d9534f;
-    color: white;
-  }
+   li.search-padding {
+     margin-top: 5px;
+   }
+   li.search-padding.btn {
+     margin-top: 0;
+   }
+   li a {
+     color: white;
+   }
+   .nav>li>a:hover{
+     background-color: black;
+   }
+   li a:hover {
+     color: #d9534f;
+   }
+   div.navbar-brand.brand-name.navbar-left {
+     padding: 8px 20px 0 20px;
+     background-color: white;
+     height: 86px;
+     border: 4px solid black;
+   }
  }
- .carousel.slide {
-   height: 500px;
-   width: 900px;
- }
-
-@media screen and (max-width: 650px) {
-  body ul li {
-    display: block;
-    margin: 1em auto;
-  }
-}
