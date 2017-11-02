@@ -54,6 +54,7 @@
         <p class="rated" data-score="<%= @product.highest_rating_comment %>"> Highest rating : </p>
         <p class="rated" data-score="<%= @product.lowest_rating_comment %>"> Lowest rating : </p>
         <%= render 'new_comment' %>
+        <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
         <%= render 'comments' %>
         <% @comments.each do |comment| %>
           <% end %>
