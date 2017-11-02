@@ -12,6 +12,8 @@
 
         <div class="product-info">
 
+          <% cache @product do %>
+
           <p><strong>Name:</strong>
           <%= @product.name %></p>
 
@@ -38,6 +40,8 @@
               <%= render partial: "shared/stripe_checkout_button" %>
             <% end %>
           </div>
+
+          <% end %> <!-- caching -->
 
           <br />
 
