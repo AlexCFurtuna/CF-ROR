@@ -5,7 +5,7 @@ class UserMailer < ApplicationMailer
     @name = params[:name]
     @email = params[:email]
     @message = params[:message]
-    mail(:to => 'alexcfurtuna@gmail.com', :subject => "New Message!"
+    mail(:to => 'alexcfurtuna@gmail.com', :subject => "New Message!")
   end
 
   def welcome(user)
@@ -17,6 +17,6 @@ class UserMailer < ApplicationMailer
     @name = params[:name]
     @email = params[:email]
     @message = params[:message]
-    mail(:to => 'alexcfurtuna@gmail.com', :subject => "Your order has been placed! You have been charged #{@product.price} for the #{@product.name}. You will be receiving the product soon. Thank you!")
+    mail(:to => 'alexcfurtuna@gmail.com', :subject => "Your order has been placed! You have been charged #{@product.price} for the #{@product.name}. You will be receiving the product soon. Thank you for you purchase!")
   end
 end
