@@ -4,6 +4,7 @@ class Comment < ActiveRecord::Base
 
   scope :rating_desc, -> { order(rating: :desc) }
   scope :rating_asc, -> { reorder(rating: :asc) }
+  after_create_commit { CommentUpdateJob.perform_later(self, self.user) }
 
   validates :body, presence: true
     validates :user, presence: true
