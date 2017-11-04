@@ -21,7 +21,7 @@ class PaymentsController < ApplicationController
         total: @product.price.to_i)
 
         #UserMailer.order_placed(@user, @product).deliver_now
-        #flash[:success] = "Your payment was processed successfully"
+        #flash[:success] = "Your payment was processed successfully. Thank you for purchasing #{@product.name}"
       end
 
     rescue Stripe::CardError => e

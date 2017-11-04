@@ -8,8 +8,6 @@ class StaticPagesController < ApplicationController
   end
 
   def thank_you
-    @name = params[:name]
-    @email = params[:email]
-    @message = params[:message]
+    UserMailer.contact_form(params).deliver_now
   end
 end
