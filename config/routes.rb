@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users, path: '',
+  devise_for :users, path: '', controllers: { registrations: 'users/registrations' },
    path_names: {sign_in: 'login', sign_out: 'logout' }
 
   resources :orders, only: [:index, :show, :create, :destroy]
