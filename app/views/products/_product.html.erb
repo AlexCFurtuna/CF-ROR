@@ -1,5 +1,5 @@
-<div class="col-sm-4 product-info" style="">
+<div class="col-sm-3 product-info" style="height: 180px; width: 200px">
     <% if product.image_url.present? %>
-      <%= link_to image_tag(product.image_url, class: "img-responsive" ), product %>
+      <%= link_to image_tag(product.image_url, class: "img-responsive", size: '350x200' ), product %>
     <% end %>
 </div><!-- /col -->

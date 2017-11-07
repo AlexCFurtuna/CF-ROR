@@ -7,6 +7,27 @@
 .prod-details h3 {
   color: black;
 }
+.col-sm-10 {
+  padding-left: 100px;
+}
+.sidebar.col-sm-2 {
+  border-left: 3px solid black;
+  margin: 7.5em 0 0 0;
+}
+.sidebar.col-sm-2 ul {
+  padding: 1em;
+  height: 370px;
+  margin-top: 1.5em;
+}
+.sidebar.col-sm-2 ul li a{
+  color: black;
+  list-style: none;
+  text-align: center;
+}
+.sidebar.col-sm-2 ul li a:hover {
+  text-decoration: none;
+  font-size: 1.2em;
+}
 .product-header {
   color: rgb(236, 142, 114);
   font-family: Verdana, serif;

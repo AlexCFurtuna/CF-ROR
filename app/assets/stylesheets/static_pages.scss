@@ -1,9 +1,28 @@
 $centered: center;
 
 body {
-  margin: 0 auto;
-  width: 80%;
+  width: 40%;
 
+  .about {
+    margin-top: 10em;
+    border-left: 2px solid black;  border-right: 2px solid black;
+    padding-bottom: 4em;
+  }
+  .contact {
+    margin-top: 5em;
+  }
+  $centered: center;
+
+  h1, h2, footer {
+    $centered: center;
+  }
+  .landing-img {
+    border-right: 1px solid black; border-left: 1px solid black;
+    padding: 20px;
+    width: 100%;
+    text-align: $centered;
+    margin: 10em auto 0 auto;
+  }
   ul, h1, h2, p, footer {
     text-align: $centered;
     color: black;

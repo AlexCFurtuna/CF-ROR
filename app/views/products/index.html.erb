@@ -5,7 +5,7 @@
     <h2>Portraits</h2>
     <p class="pull-right">
       <% if signed_in? && current_user.admin? %>
-      <%= link_to 'New Product', new_product_path , class: "btn btn-default" %>
+      <%= link_to 'New Product', new_product_path , class: "btn btn-danger" %>
       <% end %>
     </p><!-- new product btn -->
   </div>
@@ -13,10 +13,21 @@
 
   <div class="products">
     <div class="row">
-      <%= render @products %>
+      <div class="sidebar col-sm-2">
+        <ul>
+          <li><%= link_to 'Portraits', products_path %></li>
+          <li><%= link_to 'T-Shirts', products_path %></li>
+          <li><%= link_to 'Commissions', products_path %></li>
+          <li><%= link_to 'Murky Art in Context', products_path %></li>
+          <li><%= link_to 'Collaborations', products_path %></li>
+          <li><%= image_tag("logo.jpg", width: "140", height: "140") %></li>
+        </ul>
+      </div>
+      <div class="products col-sm-10">
+        <%= render @products %>
+      </div>
       </div>
     </div>
   </div>
-</div>
 
 <%= will_paginate @products %>

@@ -25,17 +25,26 @@
  .search-padding {
    padding: 25px;
  }
- body {
+ .nav-font {
+   font-size: 1.3em;
+ }
+ html, body {
+   height: 100%;
+   margin: 0 auto;
+   section {
+     min-height: 100%;
+     margin-bottom: -100px;
+   }
+   .footer, .push {
+     height: 100px;
+   }
    nav {
      background-color: black;
    }
    li {
      margin-top: 3px;
      color: white;
-     padding: 15px;
-   }
-   li.search-padding {
-     margin-top: 5px;
+     padding: 5px;
    }
    li.search-padding.btn {
      margin-top: 0;
@@ -48,11 +57,5 @@
    }
    li a:hover {
      color: #d9534f;
-   }
-   div.navbar-brand.brand-name.navbar-left {
-     padding: 8px 20px 0 20px;
-     background-color: white;
-     height: 86px;
-     border: 4px solid black;
    }
  }
