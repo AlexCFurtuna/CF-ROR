@@ -42,3 +42,9 @@ body {
     color: black;
     font-size: 1.3em;
   }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  body {
+    width: 100%;
+  }
+}
