@@ -1,6 +1,9 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.products {
+  margin-top: 5em;
+}
 .sidebar.col-sm-2 ul {
   padding: 1em;
   height: 370px;
@@ -17,4 +20,7 @@
 }
 img.img-responsive {
   margin: 0 auto;
+}
+.pull-right.btn {
+  margin-right: 10em;
 }
