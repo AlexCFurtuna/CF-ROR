@@ -1,13 +1,10 @@
-<section>
+<section style="margin-top: 4em;">
   <div class="show">
     <p id="notice"><%= notice %></p>
     <div class="row" data-product-id="<%= @product.id %>">
-      <div class="col-lg-1">
-
-      </div>
-      <div class="col-lg-5">
+      <div class="col-sm-6" style="float: left;">
         <% if @product.image_url.present? %>
-          <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: @product.image_url, style: "width: 60%;") %>
+          <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: @product.image_url, style: "width: 40%;") %>
         <% end %>
 
         <div class="product-info">
@@ -29,11 +26,11 @@
           <div class="text-center">
             <% if signed_in? && current_user.admin? %>
             <%= link_to 'Delete',
-              product_path(@product), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-default' %>
+              product_path(@product), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger', style: 'margin: 1em; color: white' %>
             <% end %>
 
             <% if signed_in? && current_user.admin? %>
-            <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-default' %>
+            <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-danger', style: 'margin: 1em; color: white' %>
             <% end %>
 
             <%= form_tag "/payments/create" do %>
@@ -49,7 +46,7 @@
 
         </div><!--product-info-->
       </div><!--col-lg-6-->
-      <div class="col-lg-5">
+      <div class="col-sm-6">
         <p><strong>Reviews</strong></p>
         <p class="rated" data-score="<%= @product.highest_rating_comment %>"> Highest rating : </p>
         <p class="rated" data-score="<%= @product.lowest_rating_comment %>"> Lowest rating : </p>

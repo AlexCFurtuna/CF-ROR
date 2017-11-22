@@ -7,6 +7,10 @@ Rails.application.routes.draw do
 
   resources :products do
     resources :comments
+
+    collection do
+      resources :tshirts, :commissions
+    end
   end
 
   resources :users
@@ -19,7 +23,7 @@ Rails.application.routes.draw do
   post 'static_pages/thank_you'
   post 'payments/create'
 
-  root 'static_pages#index'
+  root 'static_pages#landing_page'
   mount ActionCable.server => '/cable'
 
 end

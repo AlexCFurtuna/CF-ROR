@@ -36,7 +36,7 @@
               <li class="nav-font"><%= link_to 'Products', products_path %></li>
               <li class="nav-font"><%= link_to 'About', static_pages_about_path %></li>
               <li class="nav-font"><%= link_to 'Contact', static_pages_contact_path %></li>
-              <li style="margin: 0.8em 0 0 17em;">
+              <li style="margin: 0.8em 0 0 13.5em;">
                 <%= form_tag("/products", method: "get") do %>
                   <%= label_tag(:q, "Search for:") %>
                   <%= text_field_tag(:q, nil, class: 'black') %>
@@ -74,8 +74,10 @@
       </div>
 
       <br />
+      <div class="" style="">
+        <%= yield %>
+      </div>
 
-      <%= yield %>
       <div class="push"></div>
       <footer class="footer">
         <p>&copy; 2017 Murky Art</p>

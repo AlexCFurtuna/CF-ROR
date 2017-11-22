@@ -1,43 +1,92 @@
 <div class="container-fluid">
-  <div class="row">
-    <h1>Welcome to Murky Art</h1>
-    <h2>Your source for charcoal portraits</h2>
-    <div class="col-lg-1">
+  <h1>Welcome to Murky Art</h1>
+  <h2>Your source for art</h2>
+  <div class="row portraits">
 
-    </div>
-    <div class="col-lg-10">
-      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <div class="portraits carousel col-sm-3">
+      <div class="" id="landing-carousel">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <% @products.each do |product| %>
+            <div class="item<%= " active" if product == @products.first %>">
+              <%= image_tag(product.image_url, :style => "margin: 0 auto;", size: "500x500") %>
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-          <% @products.each do |product| %>
-          <div class="item<%= " active" if product == @products.first %>">
-            <%= image_tag(product.image_url, :style => "margin: 0 auto;", size: "600x600") %>
-
-            <div class="carousel-caption">
-              <%= product.name %>
-            </div>
+              <div class="carousel-caption">
+                <%= product.name %>
               </div>
-          <% end %>
+                </div>
+            <% end %>
+          </div>
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
+          <!-- carousel indicators -->
+      </div><!-- landing carousel -->
+    </div><!-- potraits-carousel -->
+    <div class="tshirts carousel col-sm-3">
+      <div class="" id="landing-carousel">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <% @products.each do |product| %>
+            <div class="item<%= " active" if product == @products.first %>">
+              <%= image_tag(product.image_url, :style => "margin: 0 auto;", size: "500x500") %>
 
-        <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
+              <div class="carousel-caption">
+                <%= product.name %>
+              </div>
+                </div>
+            <% end %>
+          </div>
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+          <!-- Indicators -->
+      </div><!-- landing carousel -->
+    </div><!-- tshirts carousel -->
+    <div class="commissions carousel col-sm-3">
+      <div class="" id="landing-carousel">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        </ol>
-    </div>
-  </div>
-</div>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <% @products.each do |product| %>
+            <div class="item<%= " active" if product == @products.first %>">
+              <%= image_tag(product.image_url, :style => "margin: 0 auto;", size: "500x500") %>
+
+              <div class="carousel-caption">
+                <%= product.name %>
+              </div>
+                </div>
+            <% end %>
+          </div>
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+          <!-- Indicators -->
+      </div><!-- landing carousel -->
+    </div><!-- commissions carousel -->
+  </div><!-- row portraits -->
+</div><!-- container-fluid -->

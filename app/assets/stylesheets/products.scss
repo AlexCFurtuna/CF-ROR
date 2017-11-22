@@ -1,23 +1,10 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.container-fluid.products {
-  margin-top: 100px;
-}
-.prod-details h3 {
-  color: black;
-}
-.col-sm-10 {
-  padding-left: 100px;
-}
-.sidebar.col-sm-2 {
-  border-left: 3px solid black;
-  margin: 7.5em 0 0 0;
-}
 .sidebar.col-sm-2 ul {
   padding: 1em;
   height: 370px;
-  margin-top: 1.5em;
+  margin: 1.5em 0 0 -7em;
 }
 .sidebar.col-sm-2 ul li a{
   color: black;
@@ -28,22 +15,6 @@
   text-decoration: none;
   font-size: 1.2em;
 }
-.product-header {
-  color: rgb(236, 142, 114);
-  font-family: Verdana, serif;
-  font-weight: 300;
-  font-size: 20px;
-  text-align: center;
-}
-.product-info {
-  margin-top: 60px;
-}
-.product-info p {
-  color: black;
-}
 img.img-responsive {
   margin: 0 auto;
-}
-.black {
-  color: black;
 }
