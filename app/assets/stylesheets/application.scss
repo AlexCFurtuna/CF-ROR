@@ -60,3 +60,9 @@
      color: #d9534f;
    }
  }
+
+ @media screen and (min-width: 320px) and (max-width: 767px) {
+   #bar {
+     color: white;
+   }
+ }
