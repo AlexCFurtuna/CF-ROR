@@ -32,11 +32,11 @@
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-              <li class="nav-font"><%= link_to 'Home', root_path %></li>
+              <li id="home" class="nav-font"><%= link_to 'Home', root_path %></li>
               <li class="nav-font"><%= link_to 'Products', products_path %></li>
               <li class="nav-font"><%= link_to 'About', static_pages_about_path %></li>
               <li class="nav-font"><%= link_to 'Contact', static_pages_contact_path %></li>
-              <li style="margin: 0.8em 0 0 13.5em;">
+              <li id="dropdown">
                 <%= form_tag("/products", method: "get") do %>
                   <%= label_tag(:q, "Search for:") %>
                   <%= text_field_tag(:q, nil, style: "color: black;") %>
@@ -44,10 +44,10 @@
                 <% end %>
               </li>
               </ul>
-              <ul class="nav navbar-nav search float-r">
+              <ul class="nav navbar-nav search">
                 <% if user_signed_in? %>
-                  <li><%= link_to 'Edit Profile', edit_user_path(current_user) %></li>
                   <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
+                  <li id="dropdown"><%= link_to 'Edit Profile', edit_user_path(current_user) %></li>
                 <% else %>
                   <li><%= link_to('Login', new_user_session_path) %></li>
                 <% end %>
@@ -55,6 +55,10 @@
           </div>
         </div>
       </nav>
+
+      <div class="small-screen-logo" style="display: none;">
+        <%= image_tag ("logo.jpg"), class: "img-responsive" %>
+      </div>
 
       <br />
       <br />
@@ -70,7 +74,7 @@
       </div>
 
       <br />
-      <div class="" style="">
+      <div class="yield" style="">
         <%= yield %>
       </div>
 

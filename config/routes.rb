@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :comments
 
     collection do
-      resources :tshirts, :commissions
+      resources :tshirts, :commissions, :collaborations
     end
   end
 

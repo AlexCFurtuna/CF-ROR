@@ -1,12 +1,7 @@
 $centered: center;
 
 body {
-  width: 40%;
-  }
-  .row.landing {
-    border: 1px solid pink;
-    width: 100%;
-    height: 800px;
+  width: 80%;
   }
   #landing-carousel {
     margin-top: 9em;
@@ -21,12 +16,8 @@ body {
     width: 50%;
     margin: 10em auto 0 auto;
   }
-  .landing-page {
-
-  }
-
-  h1, h2, footer {
-    $centered: center;
+  #carousel {
+    margin-top: 6em;
   }
   .landing-img {
     border-right: 1px solid black; border-left: 1px solid black;
@@ -44,7 +35,12 @@ body {
   }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .navbar-brand {
-    margin-top: -60px;
+
+  .carousel-control {
+    visibility: hidden;
+  }
+  #landing-carousel {
+    width: 80%;
+    margin: 0 auto;
   }
 }

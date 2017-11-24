@@ -36,8 +36,21 @@
      min-height: 100%;
      margin-bottom: -100px;
    }
-   .footer, .push {
-     height: 100px;
+   .yield {
+     margin-top: 5em;
+   }
+   .yield h1 {
+     font-size: 3em;
+   }
+   .yield h2 {
+     font-size: 2.3em;
+   }
+   .footer {
+     position: fixed;
+     left: 0px;
+     bottom: 0px;
+     height: 30px;
+     width: 100%;
    }
    nav {
      background-color: black;
@@ -47,8 +60,8 @@
      color: white;
      padding: 5px;
    }
-   li.search-padding.btn {
-     margin-top: 0;
+   #dropdown {
+     margin: 0.8em 0 0 13.5em;
    }
    li a {
      color: white;
@@ -62,7 +75,121 @@
  }
 
  @media screen and (min-width: 320px) and (max-width: 767px) {
-   #bar {
+   button.navbar-toggle span.icon-bar {
      color: white;
+     background-color: white;
+   }
+   .navbar-brand {
+     display: none;
+   }
+   .navbar-nav>li>a {
+     padding: 0;
+   }
+   .navbar-nav {
+     margin: 0;
+   }
+   ul.nav.navbar-nav.search {
+     margin-bottom: 3em;
+   }
+   li {
+     padding: 0;
+     margin-top: 0;
+   }
+   #dropdown form  {
+     display: none;
+   }
+   li#dropdown {
+     margin: 0 auto;
+     padding: 0;
+   }
+   li.nav-font {
+     padding: 0;
+   }
+   .yield h1 {
+     font-size: 2em!important;
+   }
+   .yield h2 {
+     font-size: 1.5em!important;
+   }
+   .small-screen-logo {
+     display: inline-block!important;
+     margin: 5em auto -10em auto;
+   }
+   #carousel, div.tshirts.carousel.col-sm-4{
+     margin-top: 3em!important;
+   }
+   .footer {
+     position: relative!important;
+     top: 5em; left: 0px; bottom: 0;
+     height: 30px;
+     width: 100%;
+   }
+ }
+ @media screen and (min-width: 500px) and (max-width: 768px) {
+   .yield h1 {
+     font-size: 2.5em!important;
+   }
+   .yield h2 {
+     font-size: 2em!important;
+   }
+   .small-screen-logo {
+     margin: 0em auto -15em auto!important;
+   }
+
+ }
+ @media screen and (min-width: 768px) and (max-width: 1024px) {
+   .navbar-toggle {
+      display: block;
+    }
+    button.navbar-toggle span.icon-bar {
+      background-color: white;
+    }
+    .nav {
+      padding: 0;
+    }
+    .navbar-collapse.collapse {
+      display: none!important;
+    }
+    .navbar-nav {
+      float: none!important;
+    }
+    .navbar-nav>li {
+      float: none;
+    }
+    .navbar-nav>li>a {
+      padding: 10px 0 10px 0px;
+    }
+    .collapse.in{
+      display:block !important;
+    }
+    .navbar-nav {
+      margin: 0;
+    }
+    .navbar-header {
+      float: right;
+    }
+    .navbar-brand {
+      display: none;
+    }
+    li {
+      padding: 0;
+      margin-top: 0;
+    }
+    li#dropdown {
+      margin: 0 auto;
+      padding: 0;
+    }
+    li.nav-font {
+      padding: 0;
+    }
+ }
+ @media screen and (min-width: 1025px) and (max-width: 1280px) {
+
+   .navbar-nav>li>a {
+     padding: 10px;
+     font-size: 1em;
+   }
+   li#dropdown {
+     margin: 0;
    }
  }
