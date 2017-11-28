@@ -21,6 +21,11 @@ $(document).on('turbolinks:load', function(){
   $(".img-zoom").elevateZoom({
     zoomType: "lens",
     lensShape: "round",
-    lensSize: 200,
+    lensSize: 400,
   });
 });
+rotateLeftX = function(){
+    document.getElementById('cube').style.webkitTransform = "rotateY(-180deg)";
+    document.getElementById('experiment').style.visibility = "hidden";
+    document.getElementById('button').style.visibility = "hidden";
+};

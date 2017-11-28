@@ -4,7 +4,7 @@ body {
   width: 80%;
   }
   #landing-carousel {
-    margin-top: 9em;
+    margin: 9em auto 5em auto;
   }
   .about {
     margin: 10em auto 0 auto;
@@ -12,6 +12,21 @@ body {
     padding-bottom: 4em;
     width: 60%;
   }
+  #experiment {
+
+  }
+  #cube {
+    margin: 0 auto;
+    -webkit-transition: -webkit-transform 2s linear;
+    -webkit-transform-style: preserve-3d;
+  }
+  .face {
+    padding: 5px;
+    background-color: lightgrey;
+  }
+  #cube .cdown {
+    -webkit-transform: rotateX(-90deg);
+}
   .contact {
     width: 50%;
     margin: 10em auto 0 auto;

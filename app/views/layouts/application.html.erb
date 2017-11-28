@@ -36,21 +36,23 @@
               <li class="nav-font"><%= link_to 'Products', products_path %></li>
               <li class="nav-font"><%= link_to 'About', static_pages_about_path %></li>
               <li class="nav-font"><%= link_to 'Contact', static_pages_contact_path %></li>
-              <li id="dropdown">
-                <%= form_tag("/products", method: "get") do %>
-                  <%= label_tag(:q, "Search for:") %>
-                  <%= text_field_tag(:q, nil, style: "color: black;") %>
-                  <%= submit_tag("Search", class: 'btn btn-danger') %>
-                <% end %>
-              </li>
+
               </ul>
-              <ul class="nav navbar-nav search">
+              <ul class="nav navbar-nav login">
+                <li id="dropdown">
+                  <%= form_tag("/products", method: "get") do %>
+                    <%= label_tag(:q, "Search for:") %>
+                    <%= text_field_tag(:q, nil, style: "color: black;") %>
+                    <%= submit_tag("Search", class: 'btn btn-danger') %>
+                  <% end %>
+                </li>
                 <% if user_signed_in? %>
                   <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
-                  <li id="dropdown"><%= link_to 'Edit Profile', edit_user_path(current_user) %></li>
+                  <li id="login"><%= link_to 'Edit Profile', edit_user_path(current_user) %></li>
                 <% else %>
-                  <li><%= link_to('Login', new_user_session_path) %></li>
+                  <li ><%= link_to('Login', new_user_session_path) %></li>
                 <% end %>
+
               </ul>
           </div>
         </div>
