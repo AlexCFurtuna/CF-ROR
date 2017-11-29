@@ -61,15 +61,20 @@
    }
    li a {
      color: white;
+     font-size: 1em;
+     font-weight: 200;
    }
    .nav>li>a:hover{
      background-color: black;
    }
    li a:hover {
      color: #f531db;
+     font-weight: 400;
+
    }
-   .btn-danger {
+   .btn-danger, .btn-danger:hover {
      background-color: #f531db;
+     border: 1px solid #f531db;
    }
    a.left.carousel-control, a.right.carousel-control {
      display: none;
@@ -126,6 +131,7 @@
      height: 30px;
      width: 100%;
    }
+
  }
  @media screen and (min-width: 500px) and (max-width: 768px) {
    .yield h1 {

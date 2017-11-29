@@ -24,3 +24,20 @@ img.img-responsive {
 .pull-right.btn {
   margin-right: 10em;
 }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+  p.pull-right.btn {
+    float: none!important;
+    margin: 0 auto!important;
+    display: block;
+  }
+  .col-sm-2 ul {
+    margin: 0 auto!important;
+  }
+  div.col-sm-3 {
+    width: 90%!important;
+    height: 100%!important;
+    margin: 1em auto!important;
+  }
+}

@@ -12,20 +12,33 @@ body {
     padding-bottom: 4em;
     width: 60%;
   }
-  #experiment {
-
-  }
   #cube {
     margin: 0 auto;
     -webkit-transition: -webkit-transform 2s linear;
     -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility:    hidden;
+    -ms-backface-visibility:     hidden;
   }
   .face {
     padding: 5px;
-    background-color: lightgrey;
+  }
+  .face.cback {
+    -webkit-backface-visibility: visible;
+    -moz-backface-visibility:    visible;
+    -ms-backface-visibility:     visible;
+    }
+  .murky-colours {
+    background-color: #f531db;
+    color: white;
+    padding-right: 1em;
+  }
+  .face.cback {
+
   }
   #cube .cdown {
     -webkit-transform: rotateX(-90deg);
+    backface-visibility: hidden;
 }
   .contact {
     width: 50%;
