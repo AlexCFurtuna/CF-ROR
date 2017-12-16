@@ -78,6 +78,12 @@ body {
   margin: 0 auto!important;
   font-size: 3em;
 }
+.about {
+  background-image: url("/assets/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; height: 870px;
+  margin-top: -100px;
+}
 
   .murky-colours {
     background-color: #f531db;
