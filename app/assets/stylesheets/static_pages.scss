@@ -6,40 +6,84 @@ body {
   #landing-carousel {
     margin: 9em auto 5em auto;
   }
-  .about {
-    margin: 10em auto 0 auto;
-    border-left: 2px solid black;  border-right: 2px solid black;
-    padding-bottom: 4em;
-    width: 60%;
-  }
-  #cube {
-    margin: 0 auto;
-    -webkit-transition: -webkit-transform 2s linear;
+  // About //
+
+  .container {
+    position: relative;
+    height: 260px;
+    margin: 0 auto 40px auto;
+    -webkit-perspective: 800px;
+       -moz-perspective: 800px;
+        -ms-perspective: 800px;
+         -o-perspective: 800px;
+            perspective: 800px;
+}
+.container .card-about {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    -webkit-transition: -webkit-transform 1s;
+       -moz-transition:    -moz-transform 1s;
+        -ms-transition:     -ms-transform 1s;
+         -o-transition:      -o-transform 1s;
+            transition:         transform 1s;
+
     -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+         -o-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+.container .card-about .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+
     -webkit-backface-visibility: hidden;
-    -moz-backface-visibility:    hidden;
-    -ms-backface-visibility:     hidden;
-  }
-  .face {
-    padding: 5px;
-  }
-  .face.cback {
-    -webkit-backface-visibility: visible;
-    -moz-backface-visibility:    visible;
-    -ms-backface-visibility:     visible;
-    }
+       -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+         -o-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+.container .card-about.flipped,
+.container .card-about .face2 {
+    -webkit-transform: rotateY(180deg);
+       -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+         -o-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+}
+.container .card-about .face .content1 {
+
+}
+.container .card-about .face .content2 {
+  background-color: white;}
+
+.store-about {
+    display: none;
+}
+.buttons {
+    text-align: center;
+    margin-top: 100px;
+}
+#flip1 {
+  visibility: hidden;
+}
+#flip2 {
+  margin: 0 auto!important;
+  font-size: 3em;
+}
+
   .murky-colours {
     background-color: #f531db;
     color: white;
     padding-right: 1em;
   }
-  .face.cback {
-
-  }
-  #cube .cdown {
-    -webkit-transform: rotateX(-90deg);
-    backface-visibility: hidden;
-}
   .contact {
     width: 50%;
     margin: 10em auto 0 auto;
@@ -60,6 +104,12 @@ body {
   div.form-group label {
     color: black;
     font-size: 1.3em;
+  }
+  footer {
+    background-color: black;
+  }
+  footer p {
+    color: white;
   }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
