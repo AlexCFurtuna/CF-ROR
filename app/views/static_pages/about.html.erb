@@ -1,87 +1,16 @@
 <div class="about">
-
-
-<div class="container">
-    <div class="card-about">
-        <div class="face face1"></div>
-        <div class="face face2"></div>
-    </div>
-
-    <ul class="store-about">
-        <li>
-            <div class="content content1">
-
-            </div>
-        </li>
-        <li>
-            <div class="content content2">
-              <h1>Portraits of the artists</h1>
-              <h2>Murky Art is Mark Baker</h2>
-              <p>Mark is a self-taught charcoal and pen portrait artist based in South London. His art is a reflection of his love for music.
-                   As well as working on personal and commisioned projects, he is also an academic support tutor at University of the Arts London.
-              </p>
-            </div>
-        </li>
-    </ul>
-</div>
-
-<div class="buttons">
-    <input class="btn btn-danger" type="button" id="flip1" value="Murky Art"/>
-    <input class="btn btn-danger" type="button" id="flip2" value="Who is Mark Baker?"/>
-</div>
-
-<script type="text/javascript">
-var topCard = 1;
-var facingUp = true;
-
-function flipCard(n) {
-  if (topCard === n) return;
-
-  // Replace the contents of the current back-face with the contents
-  // of the element that should rotate into view.
-  var curBackFace = $('.' + (facingUp ? 'face2' : 'face1'));
-  var nextContent = $('.store-about' + n).html();
-  var nextContent = $('.store-about li:nth-child(' + n + ')').html();
-  curBackFace.html(nextContent);
-
-  // Rotate the content
-  $('.card-about').toggleClass('flipped');
-  topCard = n;
-  facingUp = !facingUp;
-}
-
-$('#flip1').on('click', function(){ flipCard(1); });
-$('#flip2').on('click', function(){ flipCard(2); });
-
-$(document).ready(function(){
-  // Add the appropriate content to the initial "front side"
-  var frontFace = $('.face1');
-  var frontContent = $('.store-about li:first-child').html();
-  frontFace.html(frontContent);
-});
-
-</script>
-</div>
-
-
-
-<!--<div class="about" id="cube">
   <div class="container-fluid">
-    <div class="row">      <div class="col-sm-12 text-center">
-      <button class="btn btn-danger", id="button" onclick="rotateLeftX()">Who is Mark Baker?</button>
-        <div>
-          <div class="face cfront">
-          </div>
-            <div class="face cback" id="back">
-              <h1>Portraits of the artists</h1>
-              <h2>Murky Art is Mark Baker</h2>
-              <p>Mark is a self-taught charcoal and pen portrait artist based in South London. His art is a reflection of his love for music.
-                   As well as working on personal and commisioned projects, he is also an academic support tutor at University of the Arts London.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <h1>Who is Mark Baker</h1>
+        <h2>Murky <span class="murky-colours">Art</span> is Mark Baker</h2>
+        <p>Mark is a self-taught charcoal and pen portrait artist based in South London.
+           His art is a reflection of his love for music.
+           As well as working on personal and commisioned projects, he is also an academic support tutor at University of the Arts London.
+        </p>
+    </div><!-- col -->
+    <div class="col-sm-8">
+      
     </div>
-  </div>
-</div> -->
+  </div><!-- row -->
+</div>

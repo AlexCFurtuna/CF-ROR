@@ -1,13 +1,1 @@
-$primary-color: black;
-$centered: center;
 
-.container.header {
-  width: 55%;
-  $centered: center;
-}
-
-@media screen and (min-width: 400px) and (max-width: 650px) {
-  .container.header, .contact-details {
-    text-align: $centered;
-  }
-}

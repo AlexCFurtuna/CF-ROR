@@ -1,4 +1,70 @@
-<section style="margin-top: 4em;">
+<div class="products">
+  <p id="notice"><%= notice %></p>
+  <div class="header">
+    <h2> <%= @product.name %> </h2>
+    <p class="pull-right btn">
+      <% if signed_in? && current_user.admin? %>
+      <%= link_to 'New Product', new_product_path , class: "btn btn-danger" %>
+      <% end %>
+    </p><!-- new product btn -->
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-1">
+
+      </div>
+      <div class="sidebar col-sm-2">
+        <ul>
+          <li><%= image_tag("logo.jpg", width: "200", height: "200") %></li>
+          <li><%= link_to 'Portraits', products_path %></li>
+          <li><%= link_to 'T-Shirts', tshirts_path %></li>
+          <li><%= link_to 'Commissions', commissions_path %></li>
+        </ul>
+      </div>
+      <div class="">
+
+      </div>
+      <div class="products col-sm-9">
+        <div class="show">
+          <p id="notice"><%= notice %></p>
+          <div class="row" data-product-id="<%= @product.id %>">
+            <div class="" style="float: right;">
+              <% if @product.image_url.present? %>
+                <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: @product.image_url, style: "width: 40%;") %>
+              <% end %>
+
+              <div class="product-info">
+                <% cache @product do %>
+                <p><strong>Description:</strong>
+                <%= @product.description %></p>
+              <div class="text-center">
+
+                  <% if signed_in? && current_user.admin? %>
+                  <%= link_to 'Delete',
+                    product_path(@product), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger', style: 'margin: 1em; color: white' %>
+                  <% end %>
+
+                  <% if signed_in? && current_user.admin? %>
+                  <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-danger', style: 'margin: 1em; color: white' %>
+                  <% end %>
+
+                  <%= form_tag "/payments/create" do %>
+                    <%= render partial: "shared/stripe_checkout_button" %>
+                  <% end %>
+
+                </div>
+
+                <% end %> <!-- caching -->
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style media="screen">
+
+</style>
+<!--<section style="margin-top: 4em;">
   <div class="show">
     <p id="notice"><%= notice %></p>
     <div class="row" data-product-id="<%= @product.id %>">
@@ -8,7 +74,6 @@
         <% end %>
 
         <div class="product-info">
-
           <% cache @product do %>
 
           <p><strong>Name:</strong>
@@ -40,13 +105,13 @@
 
           <% end %> <!-- caching -->
 
-          <br />
 
-          <p>Average Rating: <div class="rated text-center" id="average-rating" data-score="<%= @product.average_rating %>"></div> </p>
 
-        </div><!--product-info-->
-      </div><!--col-lg-6-->
-      <div class="col-sm-6">
+<!--    <p>Average Rating: <div class="rated text-center" id="average-rating" data-score="<%= @product.average_rating %>"></div> </p>
+
+  </div><!--product-info-->
+<!--      </div><!--col-lg-6-->
+<!--      <div class="col-sm-6">
         <p><strong>Reviews</strong></p>
         <p class="rated" data-score="<%= @product.highest_rating_comment %>"> Highest rating : </p>
         <p class="rated" data-score="<%= @product.lowest_rating_comment %>"> Lowest rating : </p>
@@ -58,5 +123,5 @@
         <%= will_paginate @comments %>
       </div>
     </div><!--row-->
-  </div><!--show-->
-</section>
+<!--  </div><!--show-->
+<!--</section>-->
