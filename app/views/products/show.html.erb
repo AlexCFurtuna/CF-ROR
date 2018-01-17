@@ -1,15 +1,14 @@
 <div class="products">
+  <p class="pull-right btn">
+    <% if signed_in? && current_user.admin? %>
+    <%= link_to 'New Product', new_product_path , class: "btn btn-danger" %>
+    <% end %>
+  </p><!-- new product btn -->
   <p id="notice"><%= notice %></p>
-  <div class="header">
-    <h2> <%= @product.name %> </h2>
-    <p class="pull-right btn">
-      <% if signed_in? && current_user.admin? %>
-      <%= link_to 'New Product', new_product_path , class: "btn btn-danger" %>
-      <% end %>
-    </p><!-- new product btn -->
-  </div>
+
   <div class="container-fluid">
-    <div class="row">
+    <div class="row" data-product-id="<%= @product.id %>">
+      <p id="notice"><%= notice %></p>
       <div class="col-sm-1">
 
       </div>
@@ -21,107 +20,66 @@
           <li><%= link_to 'Commissions', commissions_path %></li>
         </ul>
       </div>
-      <div class="">
 
-      </div>
-      <div class="products col-sm-9">
-        <div class="show">
-          <p id="notice"><%= notice %></p>
-          <div class="row" data-product-id="<%= @product.id %>">
-            <div class="" style="float: right;">
-              <% if @product.image_url.present? %>
-                <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: @product.image_url, style: "width: 40%;") %>
+      <div class="product-image col-sm-3">
+        <div class="header">
+          <h2> <%= @product.name %> </h2>
+        </div>
+        <% if @product.image_url.present? %>
+          <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: @product.image_url, style: "width: 100%;") %>
+          <% cache @product do %>
+          <% end %> <!-- caching -->
+        <% end %>
+      </div><!--product-image-->
+      <div class="product-info col-sm-6">
+        <div class="product-description">
+          <div class="product-model">
+            <p><%= @product.description %></p>
+            <p>£<%= @product.price %></p>
+            <div class="text-center buttons">
+              <% if signed_in? && current_user.admin? %>
+              <%= link_to 'Delete',
+                product_path(@product), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger', style: 'margin: 1em; color: white' %>
               <% end %>
 
-              <div class="product-info">
-                <% cache @product do %>
-                <p><strong>Description:</strong>
-                <%= @product.description %></p>
-              <div class="text-center">
+              <% if signed_in? && current_user.admin? %>
+              <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-danger', style: 'margin: 1em; color: white' %>
+              <% end %>
 
-                  <% if signed_in? && current_user.admin? %>
-                  <%= link_to 'Delete',
-                    product_path(@product), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger', style: 'margin: 1em; color: white' %>
-                  <% end %>
-
-                  <% if signed_in? && current_user.admin? %>
-                  <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-danger', style: 'margin: 1em; color: white' %>
-                  <% end %>
-
-                  <%= form_tag "/payments/create" do %>
-                    <%= render partial: "shared/stripe_checkout_button" %>
-                  <% end %>
-
-                </div>
-
-                <% end %> <!-- caching -->
-      </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style media="screen">
-
-</style>
-<!--<section style="margin-top: 4em;">
-  <div class="show">
-    <p id="notice"><%= notice %></p>
-    <div class="row" data-product-id="<%= @product.id %>">
-      <div class="col-sm-6" style="float: left;">
-        <% if @product.image_url.present? %>
-          <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: @product.image_url, style: "width: 40%;") %>
-        <% end %>
-
-        <div class="product-info">
-          <% cache @product do %>
-
-          <p><strong>Name:</strong>
-          <%= @product.name %></p>
-
-          <p><strong>Description:</strong>
-          <%= @product.description %></p>
-
-          <p><strong>Colour:</strong>
-          <%= @product.colour %></p>
-
-          <p><strong>Price:</strong>
-          £<%= @product.price %></p>
-
-          <div class="text-center">
-            <% if signed_in? && current_user.admin? %>
-            <%= link_to 'Delete',
-              product_path(@product), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger', style: 'margin: 1em; color: white' %>
-            <% end %>
-
-            <% if signed_in? && current_user.admin? %>
-            <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-danger', style: 'margin: 1em; color: white' %>
-            <% end %>
-
-            <%= form_tag "/payments/create" do %>
-              <%= render partial: "shared/stripe_checkout_button" %>
-            <% end %>
-          </div>
-
-          <% end %> <!-- caching -->
-
-
-
-<!--    <p>Average Rating: <div class="rated text-center" id="average-rating" data-score="<%= @product.average_rating %>"></div> </p>
-
-  </div><!--product-info-->
-<!--      </div><!--col-lg-6-->
-<!--      <div class="col-sm-6">
-        <p><strong>Reviews</strong></p>
-        <p class="rated" data-score="<%= @product.highest_rating_comment %>"> Highest rating : </p>
-        <p class="rated" data-score="<%= @product.lowest_rating_comment %>"> Lowest rating : </p>
-        <%= render 'new_comment' %>
-        <div class="alert alert-info" style="display: none;" role="alert">A new comment was posted!</div>
-        <%= render 'comments' %>
-        <% @comments.each do |comment| %>
-          <% end %>
-        <%= will_paginate @comments %>
-      </div>
+              <%= form_tag "/payments/create" do %>
+                <%= render partial: "shared/stripe_checkout_button" %>
+              <% end %>
+            </div><!--buttons-->
+          </div><!-- prod-model-->
+        </div><!--prod description-->
+      </div><!--product-info-->
     </div><!--row-->
-<!--  </div><!--show-->
-<!--</section>-->
+  </div><!--container-fluid-->
+</div><!--products-->
+<style media="screen">
+.header h2 {
+  font-weight: lighter;
+  margin-bottom: 1em;
+  }
+.product-image {
+  padding: 30px;
+  border: 3px solid lightgrey;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(46,74,117,0.39);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(46,74,117,0.39);
+  box-shadow: 0px 0px 20px 0px rgba(46,74,117,0.39);
+  margin-top: 1em;
+}
+.product-info.col-sm-6 {
+  top: 3em;
+  width: 45%;
+}
+.product-model p {
+  font-size: 1.5em;
+  font-weight: lighter;
+  margin-top: 100px;
+}
+.buttons {
+  margin-top: 200px;
+}
+</style>

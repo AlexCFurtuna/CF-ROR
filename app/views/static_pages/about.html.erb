@@ -1,7 +1,21 @@
 <div class="about">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-sm-1">
+
+      </div>
+      <div class="sidebar col-sm-2">
+        <ul>
+          <li><%= image_tag("logo.jpg", width: "200", height: "200") %></li>
+          <li><%= link_to 'Portraits', products_path %></li>
+          <li><%= link_to 'T-Shirts', tshirts_path %></li>
+          <li><%= link_to 'Commissions', commissions_path %></li>
+        </ul>
+      </div>
+      <div class="col-sm-1">
+
+      </div>
+      <div class="col-sm-4 header">
         <h1>Who is Mark Baker</h1>
         <h2>Murky <span class="murky-colours">Art</span> is Mark Baker</h2>
         <p>Mark is a self-taught charcoal and pen portrait artist based in South London.
@@ -9,8 +23,17 @@
            As well as working on personal and commisioned projects, he is also an academic support tutor at University of the Arts London.
         </p>
     </div><!-- col -->
-    <div class="col-sm-8">
-      
-    </div>
+
   </div><!-- row -->
 </div>
+
+<style media="screen">
+
+</style>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('.col-sm-4').hide();
+    $('.col-sm-4').delay(500).fadeIn(1500);
+  });
+</script>
