@@ -1,18 +1,20 @@
-<div class="container col-sm-3">
-  <% if product.image_url.present? %>
-    <%= link_to image_tag(product.image_url, class: "img-responsive", size: '350x200' ), product %>
-  <% end %>
-  <div class="middle">
-    <div class="text-on">
-      <%= product.name %>
+<div class="products-section">
+  <div class="container col-sm-3">
+    <% if product.image_url.present? %>
+      <%= link_to image_tag(product.image_url, class: "img-responsive"), product %>
+    <% end %>
+    <div class="middle">
+      <div class="text-on">
+        <%= product.name %>
+      </div>
     </div>
-  </div>
 
-</div><!-- /col -->
+  </div><!-- /col -->
+</div>
 
 <style media="screen">
   .container.col-sm-3 {
-    height: 100%;
+    height: 350px;
     width: 250px;
     border: 3px solid lightgrey;
     background-color: white;
@@ -27,7 +29,7 @@
   transition: .5s ease;
   opacity: 0;
   position: absolute;
-  top: 80%;
+  top: 93%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -39,7 +41,6 @@
 }
 
 .text-on {
-  background-color: white;
   color: black;
   font-size: 1.5em;
   padding: 10px;
