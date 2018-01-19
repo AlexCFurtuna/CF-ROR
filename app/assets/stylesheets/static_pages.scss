@@ -61,17 +61,8 @@ body {
   padding: 0 0.6em 0 0.15em;
 }
   // Contact //
-  .contact {
-    width: 50%;
-    margin: 10em auto 0 auto;
-  }
   $primary-color: black;
   $centered: center;
-
-  .container.header {
-    width: 55%;
-    $centered: center;
-  }
 
   @media screen and (min-width: 400px) and (max-width: 650px) {
     .container.header, .contact-details {

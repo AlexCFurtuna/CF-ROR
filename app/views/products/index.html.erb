@@ -1,7 +1,6 @@
 <div class="products">
   <p id="notice"><%= notice %></p>
   <div class="header">
-    <h2>Portraits</h2>
     <p class="pull-right btn">
       <% if signed_in? && current_user.admin? %>
       <%= link_to 'New Product', new_product_path , class: "btn btn-danger" %>
@@ -21,7 +20,7 @@
           <li><%= link_to 'Commissions', commissions_path %></li>
         </ul>
       </div>
-      
+
       <div class="products col-sm-9">
           <%= render @products %>
         </div>
