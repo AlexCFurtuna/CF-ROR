@@ -37,20 +37,19 @@
             <p><%= @product.description %></p>
             <p>£<%= @product.price %></p>
             <div class="text-center buttons">
-              <% if signed_in? && current_user.admin? %>
-              <%= link_to 'Delete',
-                product_path(@product), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger', style: 'margin: 1em; color: white' %>
-              <% end %>
-
               <%= form_tag "/payments/create" do %>
                 <%= render partial: "shared/stripe_checkout_button" %>
               <% end %>
 
               <% if signed_in? && current_user.admin? %>
-              <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-danger', style: 'margin: 1em; color: white' %>
+              <%= link_to 'Delete',
+                product_path(@product), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger', style: 'margin: 1em; color: white' %>
               <% end %>
 
-
+              <% if signed_in? && current_user.admin? %>
+              <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-danger', style: 'margin: 1em; color: white' %>
+              <% end %>
+              
             </div><!--buttons-->
           </div><!-- prod-model-->
         </div><!--prod description-->
