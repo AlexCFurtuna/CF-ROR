@@ -27,8 +27,6 @@
         </div>
         <% if @product.image_url.present? %>
           <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: @product.image_url, style: "width: 100%;") %>
-          <% cache @product do %>
-          <% end %> <!-- caching -->
         <% end %>
       </div><!--product-image-->
       <div class="product-info col-sm-6">
@@ -49,7 +47,6 @@
               <% if signed_in? && current_user.admin? %>
               <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-danger', style: 'margin: 1em; color: white' %>
               <% end %>
-              
             </div><!--buttons-->
           </div><!-- prod-model-->
         </div><!--prod description-->
