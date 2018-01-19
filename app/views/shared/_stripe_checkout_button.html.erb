@@ -1,5 +1,5 @@
 <span class="btn-group" role="group" aria-label="sdasdasdasd">
-  <script>
+  <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
     data-amount="<%= @product.price * 100 %>"
