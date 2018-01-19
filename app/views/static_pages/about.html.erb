@@ -1,6 +1,6 @@
 <div class="about">
   <div class="container-fluid">
-    <div class="row">
+    <div class="row top">
       <div class="col-sm-1">
 
       </div>
@@ -16,24 +16,118 @@
 
       </div>
       <div class="col-sm-4 header">
-        <h1>Who is Mark Baker</h1>
+        <h1>Who is Mark Baker?</h1>
         <h2>Murky <span class="murky-colours">Art</span> is Mark Baker</h2>
         <p>Mark is a self-taught charcoal and pen portrait artist based in South London.
            His art is a reflection of his love for music.
            As well as working on personal and commisioned projects, he is also an academic support tutor at University of the Arts London.
         </p>
     </div><!-- col -->
+  </div><!-- row top -->
 
-  </div><!-- row -->
+  <div class="row intermediate">
+    <div class="dot">
+      <ul>
+        <li class="dot-one"><i class="far fa-circle fa-4x"></i></li>
+        <li class="dot-two"><i class="far fa-circle fa-4x"></i></li>
+        <li class="dot-three"><i class="far fa-circle fa-4x"></i></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row one">
+    <div class="col-sm-12">
+      <div class="img1">
+        <!--<%= image_tag('work3.jpg', class: 'img-responsive') %>-->
+      </div>
+    </div><!--col-sm-12-->
+  </div><!--row 1-->
+  <div class="row text">
+    <div class="text-model">
+      <p>Mark is a self-taught charcoal and pen portrait artist based in South London.
+         His art is a reflection of his love for music.
+         As well as working on personal and commisioned projects, he is also an academic support tutor at University of the Arts London.
+      </p>
+    </div>
+  </div><!--row-text-->
+
+  <div class="row two">
+    <div class="col-sm-12">
+      <div class="img2">
+        <!--<%= image_tag('work3.jpg', class: 'img-responsive') %>-->
+      </div>
+    </div><!--col-sm-6-->
+  </div><!--row2-->
+
+  <div class="row text">
+    <div class="text-model">
+      <p>Mark is a self-taught charcoal and pen portrait artist based in South London.
+         His art is a reflection of his love for music.
+         As well as working on personal and commisioned projects, he is also an academic support tutor at University of the Arts London.
+      </p>
+    </div>
+  </div><!--row-text-->
 </div>
 
 <style media="screen">
+.row.top {
+  height: 500px;
+}
+.row.intermediate {
+  height: 500px;
+}
+.dot ul li {
+  margin-top: 1em;
+  color: black;
+}
+.col-sm-12 {
+  background-color: black;
 
+}
+.img1, .img2, .img3 {
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  background-position: center;
+}
+.img1 {
+  background-image: url('/assets/work1.jpg/');
+}
+.img2 {
+  background-image: url('/assets/work2.jpg/');
+}
+.img3 {
+  background-image: url('/assets/work3.jpg/');
+}
+.row.text {
+  height: 200px;
+  background-color: black;
+  color: white;
+}
+.text-model {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 4em;
+}
+.text-model p {
+  color: white;
+  font-weight: lighter;
+}
 </style>
 
 <script type="text/javascript">
   $(document).ready(function () {
     $('.col-sm-4').hide();
     $('.col-sm-4').delay(500).fadeIn(1500);
+
+    $('.dot-one').hide();
+    $('.dot-one').delay(1000).fadeIn(1500);
+    $('.dot-two').hide();
+    $('.dot-two').delay(1500).fadeIn(1500);
+    $('.dot-three').hide();
+    $('.dot-three').delay(2000).fadeIn(1500);
   });
 </script>
