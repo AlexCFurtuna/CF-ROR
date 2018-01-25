@@ -1,29 +1,73 @@
 <div class="contact">
   <div class="container-fluid header">
-    <h1>Contact Us</h1>
     <%= flash[:notice] %>
 
       <%= form_tag("/static_pages/thank_you") do %>
 
   </div><!--container header-->
 </div>
-    <div class="row">
-      <div class="col-sm-8 contact">
+  <div class="container-fluid">
+    <div class="row 1">
+      <div class="col-sm-1">
 
       </div>
-    </div>
+      <div class="sidebar col-sm-2">
+        <ul>
+          <li><%= image_tag("logo.jpg", width: "200", height: "200") %></li>
+          <li><%= link_to 'Portraits', products_path %></li>
+          <li><%= link_to 'T-Shirts', tshirts_path %></li>
+          <li><%= link_to 'Commissions', commissions_path %></li>
+        </ul>
+      </div>
+      <div class="col-sm-1">
 
-    <div class="row">
-      <div class="col-sm-12">
+      </div>
+      <div class="col-sm-9">
+        <div>
+          <%= image_tag('top.jpg', class: 'img-responsive', width: '90%') %>
+        </div>
+        <br>
+        <br>
+        <p>Lorem ipsum dolor amet before they sold out butcher man bun occupy hoodie etsy
+          williamsburg keytar, lomo tacos wayfarers tbh schlitz art party. Neutra tattooed
+          DIY, air plant truffaut irony mumblecore cold-pressed tousled mlkshk pok pok austin
+          shaman. Asymmetrical tumeric kinfolk artisan. Wolf 90's mumblecore jean shorts.</p>
+      </div>
+    </div>
+    <div class="row two">
+      <div class="col-sm-3">
+
+      </div>
+      <div class="col-sm-4">
+          <ul>
+            <li class="contact-header">Commisions</li>
+            <br>
+            <li class="contact item">Mark Baker</li>
+            <li class="contact item">Telephone Number: 0000 0000 0000</li>
+            <li class="contact item">Email: email@example.com</li>
+          </ul>
+      </div>
+      <div class="col-sm-4">
+
+          <ul>
+            <li class="contact-header">Print Orders</li>
+            <br>
+            <li class="contact item">ASdjaskndsakjn</li>
+            <li class="contact item">ASdjaskndsakjn</li>
+          </ul>
+      </div>
+    </div>
+     <!-- row top -->
+      <!--<div class="col-sm-6">
         <div class="form-group">
           <%= label_tag :name %>
           <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name", required: "true"%>
         </div><!--name-->
-        <div class="form-group">
+        <!--<div class="form-group">
           <%= label_tag :email, "Email Address" %>
           <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email", required: "true", type: "email" %>
         </div><!--email-->
-        <div class="form-group">
+        <!--<div class="form-group">
           <%= label_tag :message %>
           <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message", required: "true" %>
 
@@ -32,16 +76,32 @@
           </button>
         <% end %>
       </div><!--message-->
-    </div><!--div-->
+    <!--</div><!--col-sm-6-->
   </div><!--row-->
-
+  </div>
 <style media="screen">
-  .col-sm-8.contact {
-    height: 700px;
-    width: 100%;
-    background-image: url('/assets/contact.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-  }
+p {
+  font-weight: lighter;
+}
+h3 {
+  text-align: center;
+  font-weight: lighter;
+}
+ul li {
+  color: black;
+  font-weight: lighter;
+}
+.row.two {
+  margin: 3em auto 9em auto;
+}
+.contact-header {
+  font-size: 2em;
+}
+.contact.item {
+  font-size: 1.3em;
+}
+.col-sm-9 p, .contact-header {
+  padding-bottom: 2em;
+  border-bottom: 1px solid #f531db;
+}
 </style>
