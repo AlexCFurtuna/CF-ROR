@@ -1,0 +1,399 @@
+/* line 4, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/comments.scss */
+textarea#comment_body.form-control {
+  margin: 0 auto;
+  width: 60%;
+  height: 7em;
+}
+/* line 1, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/devise.scss */
+div.btn.btn-danger {
+  color: white;
+}
+
+/* line 4, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/devise.scss */
+div.btn.btn-danger input {
+  background-color: transparent;
+  border: none;
+}
+
+/* line 8, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/devise.scss */
+.text-center a {
+  color: black;
+  font-size: 1em;
+}
+/* line 4, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/products.scss */
+.products {
+  margin-bottom: 5em;
+}
+
+/* line 7, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/products.scss */
+.sidebar.col-sm-2 ul {
+  padding: 1em;
+  height: 370px;
+  margin: 0em 0 0 -7em;
+}
+
+/* line 12, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/products.scss */
+.sidebar.col-sm-2 ul li a {
+  color: black;
+  list-style: none;
+  text-align: center;
+}
+
+/* line 17, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/products.scss */
+.sidebar.col-sm-2 ul li a:hover {
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+/* line 21, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/products.scss */
+img.img-responsive {
+  margin: 0 auto;
+}
+
+/* line 24, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/products.scss */
+.pull-right.btn {
+  margin-right: 10em;
+}
+
+/* line 27, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/products.scss */
+div.products.col-sm-7, div.product-info {
+  margin-bottom: 5em !important;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  /* line 32, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/products.scss */
+  .sidebar.col-sm-2 {
+    display: none;
+  }
+
+  /* line 35, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/products.scss */
+  p.pull-right.btn {
+    float: none !important;
+    margin: 0 auto !important;
+    display: block;
+  }
+
+  /* line 40, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/products.scss */
+  div.col-sm-3 {
+    width: 90% !important;
+    height: 100% !important;
+    margin: 1em auto !important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* line 47, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/products.scss */
+  .sidebar {
+    display: none;
+  }
+
+  /* line 50, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/products.scss */
+  div.products.col-sm-9 {
+    width: 100%;
+  }
+}
+/* line 4, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/show.scss */
+p {
+  font-size: 1.4em;
+}
+/* line 8, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/static_pages.scss */
+.col-sm-4 h1 {
+  margin-bottom: 1.3em;
+}
+/* line 11, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/static_pages.scss */
+.col-sm-4 h2 {
+  margin-bottom: .7em;
+}
+
+/* line 16, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/static_pages.scss */
+.murky-colours {
+  background-color: #f531db;
+  color: white;
+  padding: 0 0.6em 0 0.15em;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+/* line 17, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+.center {
+  text-align: center;
+}
+
+/* line 20, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+.search-padding {
+  padding: 25px;
+}
+
+/* line 23, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+.nav-font {
+  font-size: 1.3em;
+}
+
+/* line 26, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+html, body {
+  height: 100%;
+  margin: 0 auto 0 auto;
+  width: 100%;
+  background-image: url("/assets/ep_naturalwhite.png");
+  background-color: black;
+}
+/* line 32, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+html section, body section {
+  min-height: 100%;
+  margin-bottom: -100px;
+}
+/* line 36, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+html .yield, body .yield {
+  margin-top: 0;
+}
+/* line 39, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+html .yield h1, body .yield h1 {
+  margin-top: 1;
+  font-size: 3em;
+}
+/* line 43, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+html .yield h2, body .yield h2 {
+  font-size: 2em;
+}
+/* line 46, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+html .footer, body .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+/* line 55, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+html footer p, body footer p {
+  color: white;
+  height: 20px;
+  padding: 1.5px;
+}
+/* line 61, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+html nav, body nav {
+  background-color: black;
+}
+/* line 64, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+html li, body li {
+  color: white;
+  padding: 5px;
+  list-style: none;
+}
+/* line 69, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+html li a, body li a {
+  color: white;
+  font-size: 1em;
+  font-weight: 200;
+}
+/* line 74, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+html .nav > li > a:hover, body .nav > li > a:hover {
+  background-color: black;
+}
+/* line 77, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+html li a:hover, body li a:hover {
+  color: #f531db;
+  font-weight: 400;
+}
+/* line 81, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+html .btn-danger, html .btn-danger:hover, body .btn-danger, body .btn-danger:hover {
+  background-color: #f531db;
+  border: 1px solid #f531db;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  /* line 88, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  button.navbar-toggle span.icon-bar {
+    color: white;
+    background-color: white;
+  }
+
+  /* line 92, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  ul, h1, h2, p {
+    text-align: center;
+    color: black;
+  }
+
+  /* line 96, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  .navbar-brand {
+    display: none;
+  }
+
+  /* line 99, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  .navbar-nav > li > a {
+    padding: 0 0 0.8em 0;
+  }
+
+  /* line 102, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  .navbar-nav {
+    margin: 0;
+  }
+
+  /* line 105, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  ul.nav.navbar-nav.search {
+    margin-bottom: 3em;
+  }
+
+  /* line 108, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  li {
+    padding: 0;
+    margin-top: 0;
+  }
+
+  /* line 112, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  #dropdown form {
+    display: none;
+  }
+
+  /* line 115, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  li#dropdown {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  /* line 119, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  li.nav-font {
+    padding: 0;
+  }
+
+  /* line 122, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  .yield h1 {
+    font-size: 2em !important;
+  }
+
+  /* line 125, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  .yield h2 {
+    font-size: 1.5em !important;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 768px) {
+  /* line 131, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  .yield h1 {
+    font-size: 2.5em !important;
+  }
+
+  /* line 134, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  .yield h2 {
+    font-size: 2em !important;
+  }
+
+  /* line 137, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  .small-screen-logo {
+    margin: 0em auto -15em auto !important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* line 143, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  .navbar-toggle {
+    display: block;
+  }
+
+  /* line 146, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  button.navbar-toggle span.icon-bar {
+    background-color: white;
+  }
+
+  /* line 149, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  .nav {
+    padding: 0;
+  }
+
+  /* line 152, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+
+  /* line 155, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  .navbar-nav {
+    float: none !important;
+  }
+
+  /* line 158, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  .navbar-nav > li {
+    float: none;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  /* line 163, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  .navbar-nav > li > a {
+    padding: 10px 0 10px 0px;
+  }
+
+  /* line 166, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  .collapse.in {
+    display: block !important;
+  }
+
+  /* line 169, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  .navbar-nav {
+    margin: 0;
+  }
+
+  /* line 172, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  .navbar-header {
+    float: right;
+  }
+
+  /* line 175, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  .navbar-brand {
+    display: none;
+  }
+
+  /* line 178, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  li {
+    padding: 0;
+    margin-top: 0;
+  }
+
+  /* line 182, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  li#dropdown {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  /* line 186, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  li.nav-font {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1025px) {
+  /* line 192, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  .navbar-nav > li > a {
+    padding: 10px;
+    font-size: .9em;
+  }
+
+  /* line 196, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  .navbar-brand {
+    padding: 5px;
+  }
+
+  /* line 202, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  #dropdown form {
+    margin-top: 5px;
+    font-size: 1.1em;
+  }
+
+  /* line 206, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  #dropdown form label {
+    display: none;
+  }
+
+  /* line 209, /Users/alexfurtuna/Desktop/CF-ROR/app/assets/stylesheets/application.scss */
+  ul.nav.navbar-nav.login {
+    float: right;
+  }
+}
