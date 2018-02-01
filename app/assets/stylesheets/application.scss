@@ -13,12 +13,6 @@
  *= require_tree .
  *= require_self
  */
- .float-r {
-   float: right;
- }
- .float-f {
-   float: left;
- }
  .center {
    text-align: center;
  }
@@ -30,27 +24,38 @@
  }
  html, body {
    height: 100%;
-   margin: 0 auto;
+   margin: 0 auto 0 auto;
    width: 100%;
+   background-image: url('/assets/ep_naturalwhite.png');
+   background-color: black;
    section {
      min-height: 100%;
      margin-bottom: -100px;
    }
    .yield {
-     margin-top: 5em;
+     margin-top: 0;
    }
    .yield h1 {
+     margin-top: 1;
      font-size: 3em;
    }
    .yield h2 {
-     font-size: 2.3em;
+     font-size: 2em;
    }
    .footer {
      position: fixed;
-     left: 0px;
-     bottom: 0px;
-     height: 30px;
+     left: 0;
+     bottom: 0;
      width: 100%;
+     background-color: black;
+     color: white;
+     text-align: center;
+   }
+   footer p{
+     color: white;
+     height: 20px;
+     padding: 1.5px;
+
    }
    nav {
      background-color: black;
@@ -71,14 +76,10 @@
    li a:hover {
      color: #f531db;
      font-weight: 400;
-
    }
    .btn-danger, .btn-danger:hover {
      background-color: #f531db;
      border: 1px solid #f531db;
-   }
-   a.left.carousel-control, a.right.carousel-control {
-     display: none;
    }
  }
 
@@ -86,6 +87,10 @@
    button.navbar-toggle span.icon-bar {
      color: white;
      background-color: white;
+   }
+   ul, h1, h2, p {
+     text-align: center;
+     color: black;
    }
    .navbar-brand {
      display: none;
@@ -118,19 +123,6 @@
    }
    .yield h2 {
      font-size: 1.5em!important;
-   }
-   .small-screen-logo {
-     display: inline-block!important;
-     margin: 5em auto -10em auto;
-   }
-   #carousel, div.tshirts.carousel.col-sm-4{
-     margin-top: 3em!important;
-   }
-   .footer {
-     position: relative!important;
-     top: 5em; left: 0px; bottom: 0;
-     height: 30px;
-     width: 100%;
    }
 
  }

@@ -36,7 +36,6 @@
               <li class="nav-font"><%= link_to "Who's your hero?", products_path %></li>
               <li class="nav-font"><%= link_to 'About', static_pages_about_path %></li>
               <li class="nav-font"><%= link_to 'Contact', static_pages_contact_path %></li>
-
               </ul>
               <ul class="nav navbar-nav login">
                 <li id="dropdown">
@@ -58,9 +57,7 @@
         </div>
       </nav>
 
-      <div class="small-screen-logo" style="display: none;">
-        <%= image_tag ("logo.jpg"), class: "img-responsive" %>
-      </div>
+
 
       <br />
       <br />
@@ -76,10 +73,12 @@
       </div>
 
       <br />
-      <div class="yield" style="">
+      <div class="yield">
         <%= yield %>
       </div>
-
+      <!--<div class="small-screen-logo" style="display: none;">
+        <%= image_tag ("logo.jpg"), class: "img-responsive" %>
+      </div>-->
       <div class="push"></div>
       <footer class="footer">
         <p>&copy; 2017 Murky <span class="murky-colours">Art</span></p>

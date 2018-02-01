@@ -2,13 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .products {
-  margin-top: 1em;
   margin-bottom: 5em;
 }
 .sidebar.col-sm-2 ul {
   padding: 1em;
   height: 370px;
-  margin: 1.5em 0 0 -7em;
+  margin: 0em 0 0 -7em;
 }
 .sidebar.col-sm-2 ul li a{
   color: black;
@@ -30,18 +29,25 @@ div.products.col-sm-7, div.product-info {
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
-
+  .sidebar.col-sm-2 {
+    display: none;
+  }
   p.pull-right.btn {
     float: none!important;
     margin: 0 auto!important;
     display: block;
   }
-  .col-sm-2 ul {
-    margin: 0 auto!important;
-  }
   div.col-sm-3 {
     width: 90%!important;
     height: 100%!important;
     margin: 1em auto!important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+  div.products.col-sm-9 {
+    width: 100%;
   }
 }

@@ -1,3 +1,80 @@
+<head>
+  <style media="screen">
+  .header h2 {
+    font-weight: lighter;
+    margin-bottom: 1em;
+    }
+  .product-image {
+    padding: 30px;
+    border: 3px solid lightgrey;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(46,74,117,0.39);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(46,74,117,0.39);
+    box-shadow: 0px 0px 20px 0px rgba(46,74,117,0.39);
+    margin-top: 1em;
+  }
+  .product-info.col-sm-6 {
+    top: 3em;
+    width: 45%;
+  }
+  .product-model p {
+    font-size: 1.5em;
+    font-weight: lighter;
+    margin-top: 100px;
+  }
+  .buttons {
+    margin-top: 100px;
+  }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    .row {
+      padding: 0;
+    }
+    .col-sm-2 {
+      display: none!important;
+    }
+    .product-model p {
+      margin-top: 0;
+    }
+    p.price {
+      margin-top: 3em;
+    }
+    .product-info.col-sm-6 {
+      width: 100%;
+    }
+    div.zoomContainer {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .row {
+      margin: 0 auto;
+    }
+    .col-sm-3 {
+      width: 60%;
+      text-align: center;
+      float: none;
+      margin: 0 auto;
+      position: static;
+    }
+    .product-model p {
+      margin: 0 auto;
+    }
+    .col-sm-6 {
+      left: 10%;
+    }
+    p.price {
+      margin-top: 3em;
+      text-align: center;
+    }
+    .product-info.col-sm-6 {
+      width: 100%;
+    }
+    div.zoomContainer {
+      display: none;
+    }
+  }
+  </style>
+</head>
 <div class="products">
   <p class="pull-right btn">
     <% if signed_in? && current_user.admin? %>
@@ -35,7 +112,7 @@
         <div class="product-description">
           <div class="product-model">
             <p><%= @product.description %></p>
-            <p>£<%= @product.price %></p>
+            <p class="price">£<%= @product.price %></p>
             <div class="text-center buttons">
               <% if signed_in? && current_user.admin? %>
               <%= link_to 'Delete',
@@ -58,30 +135,3 @@
     </div><!--row-->
   </div><!--container-fluid-->
 </div><!--products-->
-<style media="screen">
-.header h2 {
-  font-weight: lighter;
-  margin-bottom: 1em;
-  }
-.product-image {
-  padding: 30px;
-  border: 3px solid lightgrey;
-  background-color: white;
-  -webkit-box-shadow: 0px 0px 20px 0px rgba(46,74,117,0.39);
-  -moz-box-shadow: 0px 0px 20px 0px rgba(46,74,117,0.39);
-  box-shadow: 0px 0px 20px 0px rgba(46,74,117,0.39);
-  margin-top: 1em;
-}
-.product-info.col-sm-6 {
-  top: 3em;
-  width: 45%;
-}
-.product-model p {
-  font-size: 1.5em;
-  font-weight: lighter;
-  margin-top: 100px;
-}
-.buttons {
-  margin-top: 100px;
-}
-</style>

@@ -1,50 +1,8 @@
 $centered: center;
 
 body {
-  background-color: #dee1e3;
-  }
-  // Index //
-  .landing {
-    margin-top: -60px;
-  }
-  .landing h1 {
-    font-size: 3em!important;
-    font-weight: lighter;
-  }
-  .landing h1 , button h1 {
-    margin-bottom: 1em;
-  }
 
-  .button h1 {
-    font-size: 1em!important;
   }
-  button {
-      background-color:#f531db;
-      padding-top: 0;
-      border-radius: 5px;
-      border-color: #f531db;
-    }
-    button h2 {
-      margin: 0;
-      padding: 5px;
-    }
-    button h2:hover {
-      padding: 5px;
-    }
-    button a {
-      color: white;
-      font-weight: lighter;
-      font-size: .7em;
-      border: none;
-    }
-    button a:hover {
-      text-decoration: none;
-      color: white;
-      font-size: 1em;
-      -webkit-transition: 1s; /* Safari */
-      -moz-transitions: 1s;
-      transition: 1s;
-    }
   // About //
 .col-sm-4 {
   h1 {
@@ -59,42 +17,4 @@ body {
   background-color: #f531db;
   color: white;
   padding: 0 0.6em 0 0.15em;
-}
-  // Contact //
-  $primary-color: black;
-  $centered: center;
-
-  @media screen and (min-width: 400px) and (max-width: 650px) {
-    .container.header, .contact-details {
-      text-align: $centered;
-    }
-  }
-  ul, h1, h2, p, footer {
-    text-align: $centered;
-    color: black;
-  }
-  div.form-group label {
-    color: black;
-    font-size: 1.3em;
-  }
-  footer {
-    background-color: black;
-  }
-  footer p {
-    color: white;
-  }
-
-@media screen and (min-width: 320px) and (max-width: 767px) {
-
-  .carousel-control {
-    visibility: hidden;
-  }
-  #landing-carousel {
-    width: 80%;
-    margin: 0 auto;
-  }
-  input#flip2.btn.btn-danger {
-    margin: 0 auto!important;
-    font-size: 1.5em;
-  }
 }
