@@ -32,6 +32,28 @@
      min-height: 100%;
      margin-bottom: -100px;
    }
+   .sidebar-li {
+     padding: 5px!important;
+   }
+   .sidebar.col-sm-2 ul {
+     height: 370px;
+     margin: 0em 0 0 -7em;
+   }
+   .sidebar.col-sm-2 ul li {
+     padding: 0;
+     font-size: 1.1em;
+   }
+   .sidebar.col-sm-2 ul li a{
+     color: black;
+     list-style: none;
+   }
+   .sidebar.col-sm-2 ul li a:hover {
+     text-decoration: none;
+     font-size: 1.2em;
+     -webkit-transition: .2s; /* Safari */
+     -moz-transitions: .2s;
+     transition: .2s;
+   }
    .yield {
      margin-top: 0;
    }

@@ -7,9 +7,9 @@
       <div class="sidebar col-sm-2">
         <ul>
           <li><%= image_tag("logo.jpg", width: "200", height: "200") %></li>
-          <li><%= link_to 'Portraits', products_path %></li>
-          <li><%= link_to 'T-Shirts', tshirts_path %></li>
-          <li><%= link_to 'Commissions', commissions_path %></li>
+          <li class="sidebar-li"><%= link_to 'Portraits', products_path %></li>
+          <li class="sidebar-li"><%= link_to 'T-Shirts', tshirts_path %></li>
+          <li class="sidebar-li"><%= link_to 'Commissions', commissions_path %></li>
         </ul>
       </div>
       <div class="col-sm-1">
@@ -70,11 +70,13 @@
 </div>
 
 <style media="screen">
-.row.top {
+.row.top, .row.intermediate {
   height: 500px;
+  text-align: center;
+  margin-top: 2em;
 }
-.row.intermediate {
-  height: 500px;
+h1 {
+  margin-top: 0!important;
 }
 .dot ul li {
   margin-top: 1em;
@@ -82,7 +84,6 @@
 }
 .col-sm-12 {
   background-color: black;
-
 }
 .img1, .img2, .img3 {
   width: 100%;

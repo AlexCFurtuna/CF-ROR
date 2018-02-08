@@ -1,3 +1,8 @@
+<style media="screen">
+  .col-sm-2 {
+    margin-top: 1.3em;
+  }
+</style>
 <div class="products">
   <h1>Portraits</h1>
   <p id="notice"><%= notice %></p>
@@ -17,9 +22,9 @@
 
         <ul>
           <li><%= image_tag("logo.jpg", width: "200", height: "200") %></li>
-          <li><%= link_to 'Portraits', products_path %></li>
-          <li><%= link_to 'T-Shirts', tshirts_path %></li>
-          <li><%= link_to 'Commissions', commissions_path %></li>
+          <li class="sidebar-li"><%= link_to 'Portraits', products_path %></li>
+          <li class="sidebar-li"><%= link_to 'T-Shirts', tshirts_path %></li>
+          <li class="sidebar-li"><%= link_to 'Commissions', commissions_path %></li>
         </ul>
       </div>
 

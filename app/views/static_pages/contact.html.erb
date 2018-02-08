@@ -11,6 +11,9 @@
     color: black;
     font-weight: lighter;
   }
+  .row.one {
+    margin-top: 2em;
+  }
   .row.two {
     margin: 3em auto 9em auto;
   }
@@ -59,16 +62,16 @@
   </div><!--container header-->
 </div>
   <div class="container-fluid">
-    <div class="row 1">
+    <div class="row one">
       <div class="col-sm-1">
 
       </div>
       <div class="sidebar col-sm-2">
         <ul>
           <li><%= image_tag("logo.jpg", width: "200", height: "200") %></li>
-          <li><%= link_to 'Portraits', products_path %></li>
-          <li><%= link_to 'T-Shirts', tshirts_path %></li>
-          <li><%= link_to 'Commissions', commissions_path %></li>
+          <li class="sidebar-li"><%= link_to 'Portraits', products_path %></li>
+          <li class="sidebar-li"><%= link_to 'T-Shirts', tshirts_path %></li>
+          <li class="sidebar-li"><%= link_to 'Commissions', commissions_path %></li>
         </ul>
       </div>
       <div class="col-sm-1">
@@ -76,7 +79,7 @@
       </div>
       <div class="col-sm-9">
         <div>
-          <%= image_tag('john-banner.png', class: 'img-responsive', width: '100%') %>
+          <%= image_tag('john-banner.png', class: 'img-responsive', width: '75%') %>
         </div>
         <br>
         <br>
