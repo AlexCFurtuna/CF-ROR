@@ -2,6 +2,17 @@
   .col-sm-2 {
     margin-top: 1.3em;
   }
+  .products.col-sm-9 {
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .col-sm-9 {
+      float: right;
+      position: relative;
+      margin: 0 auto;
+    }
+  }
+
 </style>
 <div class="products">
   <h1>Portraits</h1>
@@ -32,7 +43,7 @@
           <%= render @products %>
         </div>
       </div>
-    </div>
+    </div><!-- end of container-fluid -->
   </div>
 </div>
 
