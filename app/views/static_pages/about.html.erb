@@ -4,7 +4,7 @@
       <div class="col-sm-1">
 
       </div>
-      <div class="col-sm-4 header">
+      <div class="col-sm-4 header" id="header">
         <h1>Who is Mark Baker?</h1>
         <h2>Murky <span class="murky-colours">Art</span> is Mark Baker</h2>
         <p>Mark is a self-taught charcoal and pen portrait artist based in South London.
@@ -17,9 +17,9 @@
   <div class="row intermediate">
     <div class="dot">
       <ul>
-        <li class="dot-one"><i class="far fa-circle fa-4x"></i></li>
-        <li class="dot-two"><i class="far fa-circle fa-4x"></i></li>
-        <li class="dot-three"><i class="far fa-circle fa-4x"></i></li>
+        <li class="dot-one"><i class="fas fa-arrow-circle-down"></i></li>
+        <li class="dot-two"><i class="fas fa-arrow-circle-down"></i></li>
+        <li class="dot-three"><i class="fas fa-arrow-circle-down"></i></li>
       </ul>
     </div>
   </div>
@@ -59,17 +59,29 @@
 </div>
 
 <style media="screen">
-.row.top, .row.intermediate {
+div.row.top {
   height: 500px;
-  text-align: center;
-  margin-top: 2em;
+  margin-top: 120px;
 }
-.col-sm-4 {
-  float: none;
+.row.intermediate {
+  height: 600px;
+  width: 50%;
   margin: 0 auto;
+  text-align: center;
+  font-size: 3em;
+}
+#header {
+  text-align: center;
+  font-size: 1.5em;
+  width: 40%;
+  margin: 0 auto!important;
+  float: none;
 }
 h1 {
   margin-top: 0!important;
+}
+.dot ul {
+  padding: 0;
 }
 .dot ul li {
   margin-top: 1em;
@@ -81,7 +93,6 @@ h1 {
 .img1, .img2, .img3 {
   width: 100%;
   height: 800px;
-
   background-repeat: no-repeat;
   background-size: contain;
   background-attachment: fixed;
@@ -112,28 +123,38 @@ h1 {
   font-weight: lighter;
 }
 @media screen and (min-width: 320px) and (max-width: 1024px) {
+  div.row.top {
+    margin: 0;
+  }
+  #header {
+    text-align: center;
+    font-size: 1.5em;
+    width: 90%;
+    margin: 0 auto 0 auto!important;
+    float: none;
+  }
+  #header h1 {
+    font-size: 1.7em!important;
+  }
+  #header h2 {
+    font-size: 1.3em;
+  }
+  #header p {
+    padding-bottom: 2em;
+  }
   .col-sm-4 {
     width: 90%;
     margin: 0 auto;
   }
-  div.row.intermediate, .row.one, .row.two, .row.text {
+ .row.intermediate, .row.one, .row.two, .row.text {
     display: none;
   }
 }
-
-
 </style>
 
 <script type="text/javascript">
   $(document).on('turbolinks:load', function() {
     $('.col-sm-4').hide();
     $('.col-sm-4').delay(500).fadeIn(1500);
-
-    $('.dot-one').hide();
-    $('.dot-one').delay(1000).fadeIn(1500);
-    $('.dot-two').hide();
-    $('.dot-two').delay(1500).fadeIn(1500);
-    $('.dot-three').hide();
-    $('.dot-three').delay(2000).fadeIn(1500);
   });
 </script>
