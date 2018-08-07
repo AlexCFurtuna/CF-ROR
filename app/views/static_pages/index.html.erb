@@ -34,7 +34,6 @@ button {
   padding: 10px;
   border-radius: 10px;
   border-color: #f531db;
-  margin: 2em auto 2em auto;
   }
   button a {
     color: white;
@@ -54,7 +53,7 @@ button {
     width: 40%;
   }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .row {
     margin-bottom: 5em;
   }
@@ -65,9 +64,15 @@ button {
  .col-sm-12 {
     margin-top: 3em;
   }
-  button {
-    margin: 0;
-    font-size: .8em;
+  div.button {
+    height: 150px;
+  }
+  button a {
+    font-weight: 400!important;
+    font-size: 1em;
+  }
+  button a:hover {
+    font-size: 1em!important;
   }
   img.img-responsive {
     width: 80%;
@@ -85,6 +90,12 @@ button {
   }
   img.img-responsive {
     width: 80%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  div.button {
+    height: 150px;
+    margin-top: 50px;
   }
 }
 
