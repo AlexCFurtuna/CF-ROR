@@ -67,3 +67,4 @@ gem 'stripe'
 gem 'brakeman', '~> 4.0', '>= 4.0.1'
 gem 'dalli'
 gem 'redis-rails'
+gem "activestorage", ">= 5.2.1.1"
